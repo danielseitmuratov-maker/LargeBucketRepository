@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a61670a3c047a2bcd38ce585bf0486, type: 3}
+  m_Name: SheriffFortuneWheelFieldConfig
+  m_EditorClassIdentifier: Assembly-CSharp::_Root._Scripts.Configs.GameRoleFortuneWheelFieldConfig
+  <GameRole>k__BackingField: 2
+  <Prefab>k__BackingField: {fileID: 5705694397903206680, guid: 235fee0a6c4aa4a9b8ab35825107e2b4, type: 3}
+  <BackGroundColor>k__BackingField: {r: 0, g: 0, b: 0, a: 0}

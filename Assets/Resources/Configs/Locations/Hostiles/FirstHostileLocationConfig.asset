@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e82b3f37dc7c4df78146ceb395cfc928, type: 3}
+  m_Name: FirstHostileLocationConfig
+  m_EditorClassIdentifier: Assembly-CSharp::_Root._Scripts.Configs.HostileLocationConfig
+  <Prefab>k__BackingField: {fileID: 5808914596025329204, guid: 85acc6cc97b0a4ebd978d29e076ad0d9, type: 3}
+  <LocationId>k__BackingField: 0
+  <EnemyId>k__BackingField: 0
+  <MaxEnemiesOnScene>k__BackingField: 50
+  <SpawnInterval>k__BackingField: 4
+  <SpawnPerWave>k__BackingField: 50
+  <SpawnCenter>k__BackingField: {x: 0, y: 300, z: 0}
+  <SpawnRadius>k__BackingField: 70
+  <NoiseScale>k__BackingField: 1000
+  <FormationType>k__BackingField: 0

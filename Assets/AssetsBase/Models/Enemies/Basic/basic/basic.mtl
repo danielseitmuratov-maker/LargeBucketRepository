@@ -1,0 +1,258 @@
+newmtl NpcEnemyBlackSoldier3Mtl
+Material Color
+Ka 1 0.612066 0.325037
+Kd 1 0.612066 0.325037
+Ks 0.0627451 0.0384041 0.0203945 
+
+d 1
+
+Ns 0
+
+map_Ka NpcEnemyBlackSoldier1_diff.png
+map_Kd NpcEnemyBlackSoldier1_diff.png
+map_d NpcEnemyBlackSoldier1_diff.png
+
+newmtl NpcEnemyBlackSoldier1Mtl
+Material Color
+Ka 0.00258583 0.00258583 0.00258583
+Kd 0.00258583 0.00258583 0.00258583
+Ks 0.000162248 0.000162248 0.000162248 
+
+d 1
+
+Ns 0
+
+map_Ka NpcEnemyBlackSoldier1_diff.png
+map_Kd NpcEnemyBlackSoldier1_diff.png
+map_d NpcEnemyBlackSoldier1_diff.png
+
+newmtl Meshpart1Mtl
+Material Color
+Ka 0.0169881 0.0169881 0.0169881
+Kd 0.0169881 0.0169881 0.0169881
+Ks 0.0067286 0.0067286 0.0067286 
+
+d 1
+
+Ns 0
+
+map_Ka Meshesuntitledcube0021_diff.png
+map_Kd Meshesuntitledcube0021_diff.png
+map_d Meshesuntitledcube0021_diff.png
+
+map_Bump Meshesuntitledcube0021_nmap.png
+
+newmtl FastEssHeadset1Mtl
+Material Color
+Ka 0.00258583 0.00258583 0.00258583
+Kd 0.00258583 0.00258583 0.00258583
+Ks 0.00102419 0.00102419 0.00102419 
+
+d 1
+
+Ns 0
+
+map_Ka FastEssHeadset1_diff.png
+map_Kd FastEssHeadset1_diff.png
+map_d FastEssHeadset1_diff.png
+
+newmtl Meshesuntitledcube0021Mtl
+Material Color
+Ka 0.018913 0.018913 0.018913
+Kd 0.018913 0.018913 0.018913
+Ks 0.00749103 0.00749103 0.00749103 
+
+d 1
+
+Ns 0
+
+map_Ka Meshesuntitledcube0021_diff.png
+map_Kd Meshesuntitledcube0021_diff.png
+map_d Meshesuntitledcube0021_diff.png
+
+map_Bump Meshesuntitledcube0021_nmap.png
+
+newmtl Meshpart2Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0102561 0.0101182 0.010535 
+
+d 1
+
+Ns 0
+
+map_Ka Meshpart2_diff.png
+map_Kd Meshpart2_diff.png
+map_d Meshpart2_diff.png
+
+newmtl Meshesuntitledcube0301Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.147981 0.145991 0.152005 
+
+d 1
+
+Ns 0
+
+map_Ka Meshesuntitledcube0301_diff.png
+map_Kd Meshesuntitledcube0301_diff.png
+map_d Meshesuntitledcube0301_diff.png
+
+newmtl Union9Mtl
+Material Color
+Ka 0.0780566 0.0780566 0.0780566
+Kd 0.0780566 0.0780566 0.0780566
+Ks 0.0520377 0.0520377 0.0520377 
+
+d 1
+
+Ns 255
+
+map_Ka Union3_diff.png
+map_Kd Union3_diff.png
+map_d Union3_diff.png
+
+map_Bump Union3_nmap.png
+
+map_Ns Union3_spec.png
+
+newmtl Union7Mtl
+Material Color
+Ka 0.940601 0.940601 0.940601
+Kd 0.940601 0.940601 0.940601
+Ks 0.0848385 0.0848385 0.0848385 
+
+d 1
+
+Ns 0
+
+newmtl Union6Mtl
+Material Color
+Ka 0.00258583 0.00258583 0.00258583
+Kd 0.00258583 0.00258583 0.00258583
+Ks 0.00258583 0.00258583 0.00258583 
+
+d 1
+
+Ns 0
+
+map_Ka Union6_diff.png
+map_Kd Union6_diff.png
+map_d Union6_diff.png
+
+map_Bump Union6_nmap.png
+
+map_Ns Union6_spec.png
+
+newmtl Union8Mtl
+Material Color
+Ka 0.00715504 0.018913 0.0315514
+Kd 0.00715504 0.018913 0.0315514
+Ks 0.000308649 0.000815854 0.00136104 
+
+d 1
+
+Ns 0
+
+map_Ka Union1_diff.png
+map_Kd Union1_diff.png
+map_d Union1_diff.png
+
+map_Bump Union1_nmap.png
+
+map_Ns Union1_spec.png
+
+newmtl Union5Mtl
+Material Color
+Ka 0.560499 0.0169881 0.00775103
+Kd 0.560499 0.0169881 0.00775103
+Ks 0.0505548 0.00153226 0.000699112 
+
+d 1
+
+Ns 0
+
+newmtl Union3Mtl
+Material Color
+Ka 0.0302565 0.0302565 0.0302565
+Kd 0.0302565 0.0302565 0.0302565
+Ks 0.020171 0.020171 0.020171 
+
+d 1
+
+Ns 255
+
+map_Ka Union3_diff.png
+map_Kd Union3_diff.png
+map_d Union3_diff.png
+
+map_Bump Union3_nmap.png
+
+map_Ns Union3_spec.png
+
+newmtl Union1Mtl
+Material Color
+Ka 0.598942 0.605484 0.645555
+Kd 0.598942 0.605484 0.645555
+Ks 0.0258367 0.0261189 0.0278475 
+
+d 1
+
+Ns 0
+
+map_Ka Union1_diff.png
+map_Kd Union1_diff.png
+map_d Union1_diff.png
+
+map_Bump Union1_nmap.png
+
+map_Ns Union1_spec.png
+
+newmtl Bateria1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.147981 0.145991 0.152005 
+
+d 1
+
+Ns 0
+
+map_Ka Bateria1_diff.png
+map_Kd Bateria1_diff.png
+map_d Bateria1_diff.png
+
+newmtl Union2Mtl
+Material Color
+Ka 0.0209511 0.0209511 0.0209511
+Kd 0.0209511 0.0209511 0.0209511
+Ks 0.000821613 0.000821613 0.000821613 
+
+d 1
+
+Ns 0
+
+map_Ka Union2_diff.png
+map_Kd Union2_diff.png
+map_d Union2_diff.png
+
+map_Bump Union2_nmap.png
+
+map_Ns Union2_spec.png
+
+newmtl Meshes41Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.147981 0.145991 0.152005 
+
+d 1
+
+Ns 0
+
+map_Ka Meshes41_diff.png
+map_Kd Meshes41_diff.png
+map_d Meshes41_diff.png
+

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a61670a3c047a2bcd38ce585bf0486, type: 3}
+  m_Name: MurderFortuneWheelFieldConfig
+  m_EditorClassIdentifier: Assembly-CSharp::_Root._Scripts.Configs.GameRoleFortuneWheelFieldConfig
+  <GameRole>k__BackingField: 1
+  <Prefab>k__BackingField: {fileID: 1200574647339949818, guid: 95ce1ae372f054311914b86b0e3452b5, type: 3}
+  <BackGroundColor>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
