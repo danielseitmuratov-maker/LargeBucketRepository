@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="NewModuleRootManager">
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.accessibility" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.ai" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.androidjni" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.animation" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.assetbundle" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.audio" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.cloth" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.director" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.hierarchycore" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.imageconversion" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.imgui" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.jsonserialize" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.particlesystem" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.physics" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.physics2d" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.screencapture" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.subsystems" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.terrain" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.terrainphysics" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.tilemap" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.ui" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.uielements" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.umbra" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.unityanalytics" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequest" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequestassetbundle" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequestaudio" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequesttexture" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequestwww" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.vehicles" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.video" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.vr" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.wind" />
+    <content url="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.xr" />
+    <content url="file://$MODULE_DIR$/../.." />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -1,6 +1,4 @@
 using _Root._Scripts.Core.Character;
-using _Root._Scripts.Core.Locations.Hostile;
-using _Root._Scripts.Infrastructure.Services.SpawnPoints;
 using UnityEngine;
 
 namespace _Root._Scripts.Configs
