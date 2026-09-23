@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be99798bc23c4e44aab76324c55e888d, type: 3}
+  m_Name: Doctor
+  m_EditorClassIdentifier: Assembly-CSharp::_Root._Scripts.Core.AI.Core.NpcRoleConfigSo
+  <VisualPrefab>k__BackingField: {fileID: 33339223284783263, guid: f92585b31cb814e749d528d550ae0274, type: 3}
+  <GameRole>k__BackingField: 3
+  <GameRoleNameRu>k__BackingField: "\u0414\u043E\u043A\u0442\u043E\u0440"
+  <GameRoleNameEng>k__BackingField: 
+  <LayerMask>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 131072
+  <Behaviours>k__BackingField:
+  - {fileID: 11400000, guid: 0d239c892915b415faae8adc04cab060, type: 2}
+  - {fileID: 11400000, guid: 619e8724398684d2899da237235b3a0f, type: 2}
+  - {fileID: 11400000, guid: 27cd33788057644899048efa154f0cf7, type: 2}
+  - {fileID: 11400000, guid: ea3969a3d1cc74a5cb90d7324329a744, type: 2}
+  - {fileID: 11400000, guid: cba4d7098ca784cdab0191e2caa67da4, type: 2}

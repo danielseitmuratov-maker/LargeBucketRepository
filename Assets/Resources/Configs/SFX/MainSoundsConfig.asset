@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ce7c54b038342ddb8131860c8f1ed36, type: 3}
+  m_Name: MainSoundsConfig
+  m_EditorClassIdentifier: Assembly-CSharp::_Root._Scripts.Configs.SoundsConfig
+  <Win>k__BackingField: {fileID: 0}
+  <OnDamaged>k__BackingField: {fileID: 0}
+  <Death>k__BackingField: {fileID: 0}
+  <Swoosh>k__BackingField: {fileID: 0}
+  <BaseAttack>k__BackingField: {fileID: 8300000, guid: a3ce61947ed0a42a9a0d6a7cccf916c6, type: 3}
+  <Teleport>k__BackingField: {fileID: 0}
+  <RunSounds>k__BackingField:
+  - {fileID: 8300000, guid: 0e87e77925aca48e99bd58559aada627, type: 3}
+  - {fileID: 8300000, guid: 33b2f7d1d36ee4af48b9429f12606cdf, type: 3}
+  - {fileID: 8300000, guid: 35de8e742cb3a4ef8aa23881882f29c6, type: 3}
+  - {fileID: 8300000, guid: 6e6862af5bba64ca0a71d600be95883c, type: 3}
+  <Jump>k__BackingField: {fileID: 8300000, guid: fc2720f27cf9341a89f2fdd8128501a1, type: 3}
+  <FortuneWheelSpinStartedSond>k__BackingField: {fileID: 8300000, guid: f6a82fa306b6f4b09b3a9a2a66a14586, type: 3}
+  <FortuneWheelSpinLoopSound>k__BackingField: {fileID: 8300000, guid: fd3de655a80534e5bb8781e6141e9f55, type: 3}
+  <FortuneWheelSpinCompletedSound>k__BackingField: {fileID: 8300000, guid: 7009479cccdbf41779b615de7fb40d97, type: 3}
+  <UIButtonClickSound>k__BackingField: {fileID: 8300000, guid: 80fc5ee381a63401cb380e4db5e7a790, type: 3}
+  <UIButtonEnterSound>k__BackingField: {fileID: 0}
+  <TimerTickSound>k__BackingField: {fileID: 8300000, guid: b7a7212d4c3da4d07aed6d2d09c4891b, type: 3}
+  <TimerAlarmingCountDownSound>k__BackingField: {fileID: 8300000, guid: 4a19195d806844d62822ae31d841bf87, type: 3}

@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb522feaefb4fe99cbebd6d824e1b89, type: 3}
+  m_Name: CharacterGameRoleFortuneWheelConfig
+  m_EditorClassIdentifier: Assembly-CSharp::_Root._Scripts.Configs.GameRoleFortuneWheelConfig
+  <FieldsConfigs>k__BackingField:
+  - {fileID: 11400000, guid: 800560b0e876f4624aadea20d6de8f9d, type: 2}
+  - {fileID: 11400000, guid: 0b091c1bfddb9474f89b737c6da34d9b, type: 2}
+  - {fileID: 11400000, guid: 6adf5fbdaf7574d2cb19c7f5608538dc, type: 2}
+  - {fileID: 11400000, guid: eeb8d30744b9f4380ae1240528dbb0aa, type: 2}
+  cameraOffset: {x: 0, y: 1, z: -3}
+  winCameraOffset: {x: 0, y: 0.5, z: -2}
+  cameraRotationDuration: 1
+  resultShowDuration: 1
+  roleColors:
+  - {r: 1, g: 1, b: 1, a: 0}
+  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 1, g: 0.3820755, b: 0.9823034, a: 0}
+  - {r: 0, g: 1, b: 0.14186478, a: 0}
+  spinDuration: 1
+  extraRotations: 5
+  spinCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.99194336
+      value: 0.002380371
+      inSlope: -8.097708
+      outSlope: -8.097708
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.021934861
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  resultBackgroundOffset: {x: 0, y: 1, z: -3}
+  segmentRadius: 5

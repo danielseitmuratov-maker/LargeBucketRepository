@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2265361e9d57478da9181f8f9748a709, type: 3}
+  m_Name: ChunkConfig
+  m_EditorClassIdentifier: Assembly-CSharp::_Root._Scripts.Configs.ChunkConfig
+  <Prefab>k__BackingField: {fileID: 2849469162379302228, guid: c93b5944410c447a489c2c77a3ab780c, type: 3}
+  <Weight>k__BackingField: 50
