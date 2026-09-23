@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp.Player.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="_Root" t="Include">
+          <e p="_Scripts" t="Include">
+            <e p="Configs" t="Include">
+              <e p="CharacterConfig.cs" t="Include" />
+              <e p="ChunkConfig.cs" t="Include" />
+              <e p="EnemyConfig.cs" t="Include" />
+              <e p="Paths.cs" t="Include" />
+            </e>
+            <e p="Core" t="Include">
+              <e p="Character" t="Include">
+                <e p="CharacterAnimator.cs" t="Include" />
+                <e p="CharacterAttack.cs" t="Include" />
+                <e p="CharacterMovement.cs" t="Include" />
+                <e p="CharacterRoot.cs" t="Include" />
+                <e p="ICharacterAttack.cs" t="Include" />
+                <e p="IEnemyMovement.cs" t="Include" />
+                <e p="IMovement.cs" t="Include" />
+                <e p="IMovementConfig.cs" t="Include" />
+              </e>
+              <e p="Chunks" t="Include">
+                <e p="ActiveNextChunkHandler.cs" t="Include" />
+                <e p="ChunkRoot.cs" t="Include" />
+                <e p="FarmZones" t="Include">
+                  <e p="FarmEntranceHandler.cs" t="Include" />
+                  <e p="FarmZoneRoot.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Collectibles" t="Include">
+                <e p="CollectibleRoot.cs" t="Include" />
+              </e>
+              <e p="Enemies" t="Include">
+                <e p="BasicEnemy.cs" t="Include" />
+                <e p="BasicEnemyAnimator.cs" t="Include" />
+                <e p="BasicEnemyAttack.cs" t="Include" />
+                <e p="BasicEnemyMovement.cs" t="Include" />
+                <e p="EnemyMovementSystem.cs" t="Include" />
+                <e p="IEnemyAnimator.cs" t="Include" />
+                <e p="IEnemyAttack.cs" t="Include" />
+                <e p="IEnemyMovementSystem.cs" t="Include" />
+              </e>
+              <e p="Generators" t="Include">
+                <e p="ChunkSpawnPointGenerator.cs" t="Include" />
+                <e p="ISpawnPointGenerator.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Infrastructure" t="Include">
+              <e p="Bootstrap.cs" t="Include" />
+              <e p="G.cs" t="Include" />
+              <e p="GameStateMachine.cs" t="Include" />
+              <e p="GameStates" t="Include">
+                <e p="BootstrapState.cs" t="Include" />
+                <e p="DevelopmentState.cs" t="Include" />
+                <e p="GameLoopState.cs" t="Include" />
+                <e p="TutorialState.cs" t="Include" />
+              </e>
+              <e p="ICoroutineRunner.cs" t="Include" />
+              <e p="IExitableState.cs" t="Include" />
+              <e p="IState.cs" t="Include" />
+              <e p="Services" t="Include">
+                <e p="ConfigProviding" t="Include">
+                  <e p="ConfigProvider.cs" t="Include" />
+                  <e p="IConfigProvider.cs" t="Include" />
+                </e>
+                <e p="Factories" t="Include">
+                  <e p="ChunkFactory.cs" t="Include" />
+                  <e p="EnemyFactory.cs" t="Include" />
+                  <e p="IFactory.cs" t="Include" />
+                </e>
+                <e p="Input" t="Include">
+                  <e p="AttackButtonHandler.cs" t="Include" />
+                  <e p="AutoAttackButtonHandler.cs" t="Include" />
+                  <e p="AutoRunButtonHandler.cs" t="Include" />
+                  <e p="IAttackButton.cs" t="Include" />
+                  <e p="IAutoAttackButton.cs" t="Include" />
+                  <e p="IAutoRunButton.cs" t="Include" />
+                  <e p="IInputService.cs" t="Include" />
+                  <e p="IJumpButton.cs" t="Include" />
+                  <e p="JumpButtonHandler.cs" t="Include" />
+                  <e p="MobileInputService.cs" t="Include" />
+                  <e p="PcInputService.cs" t="Include" />
+                </e>
+                <e p="Interfaces" t="Include">
+                  <e p="IDamageable.cs" t="Include" />
+                </e>
+                <e p="Loaders" t="Include">
+                  <e p="ChunkLoader.cs" t="Include" />
+                  <e p="IAutoLoader.cs" t="Include" />
+                  <e p="ILoader.cs" t="Include" />
+                </e>
+                <e p="Pools" t="Include">
+                  <e p="ChunkPool.cs" t="Include" />
+                  <e p="EnemyPool.cs" t="Include" />
+                  <e p="IPool.cs" t="Include" />
+                </e>
+                <e p="Saves" t="Include">
+                  <e p="ISaveLoadService.cs" t="Include" />
+                  <e p="SaveLoadService.cs" t="Include" />
+                </e>
+                <e p="Spawners" t="Include">
+                  <e p="BasicEnemySpawner.cs" t="Include" />
+                  <e p="ISpawner.cs" t="Include" />
+                </e>
+                <e p="SpawnPoints" t="Include">
+                  <e p="EnemyFormationType.cs" t="Include" />
+                  <e p="EnemySpawnFormationParams.cs" t="Include" />
+                  <e p="EnemySpawnPointService.cs" t="Include" />
+                  <e p="IEnemySpawnPointService.cs" t="Include" />
+                </e>
+                <e p="Teleporters" t="Include">
+                  <e p="ITeleporter.cs" t="Include" />
+                  <e p="СharacterTeleporter.cs" t="Include" />
+                </e>
+                <e p="Upgrades" t="Include">
+                  <e p="IUpgrade.cs" t="Include" />
+                  <e p="IUpgradeService.cs" t="Include" />
+                  <e p="UpgradeSaveData.cs" t="Include" />
+                  <e p="UpgradeService.cs" t="Include" />
+                </e>
+                <e p="WeightedRandom" t="Include">
+                  <e p="IWeightedRandomService.cs" t="Include" />
+                  <e p="WeightedRandomService.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="FlatKit" t="Include">
+          <e p="[Render Pipeline] URP" t="Include">
+            <e p="Water" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="Buoyancy.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="InputSystem_Actions.cs" t="Include" />
+        <e p="PluginYourGames" t="Include">
+          <e p="Example" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="BasicData.cs" t="Include" />
+              <e p="CanvasScaleForMobile.cs" t="Include" />
+              <e p="DebugViewing.cs" t="Include" />
+              <e p="DemoTextTranslateRU.cs" t="Include" />
+              <e p="Scenes" t="Include">
+                <e p="AllDemoScenes.cs" t="Include" />
+                <e p="DemoSceneLoadButton.cs" t="Include" />
+                <e p="DemoScenePartial.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Modules" t="Include">
+            <e p="Authorization" t="Include">
+              <e p="Example" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="GetPlayerData.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="Auth_info.cs" t="Include" />
+                <e p="Auth_interface.cs" t="Include" />
+                <e p="Auth_lang.cs" t="Include" />
+                <e p="Auth_yandexPlatform.cs" t="Include" />
+                <e p="Auth_yg.cs" t="Include" />
+                <e p="GetPlayerYG.cs" t="Include" />
+              </e>
+            </e>
+            <e p="AutoTranslateLangs" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="AutoLang_info.cs" t="Include" />
+                <e p="CorrectLang.cs" t="Include" />
+                <e p="GraphicSettingsYG.cs" t="Include" />
+                <e p="LanguageYG.cs" t="Include" />
+                <e p="LangYGAdditionalText.cs" t="Include" />
+                <e p="UtilsLang.cs" t="Include" />
+              </e>
+            </e>
+            <e p="EnvirData" t="Include">
+              <e p="Example" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="GetEnvirData.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="EnvirData_interface.cs" t="Include" />
+                <e p="EnvirData_yandexPlatform.cs" t="Include" />
+                <e p="EnvirData_yg.cs" t="Include" />
+              </e>
+            </e>
+            <e p="InterstitialAdv" t="Include">
+              <e p="Example" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="DebugInterstitialAdv.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="AdNotification" t="Include">
+                  <e p="AdNotificationYG.cs" t="Include" />
+                </e>
+                <e p="InterAdv_info.cs" t="Include" />
+                <e p="InterAdv_interface.cs" t="Include" />
+                <e p="InterAdv_yandexPlatform.cs" t="Include" />
+                <e p="InterAdv_yg.cs" t="Include" />
+                <e p="InterstitialAdv_callingSimulation.cs" t="Include" />
+                <e p="InterstitialAdv_optionalPlatform.cs" t="Include" />
+                <e p="InterstitialAdv_projectSettings.cs" t="Include" />
+                <e p="TimerBeforeAds" t="Include">
+                  <e p="TimerBeforeAdsYG.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Leaderboards" t="Include">
+              <e p="Example" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="CustomLBExample.cs" t="Include" />
+                  <e p="LBExample.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="LB_info.cs" t="Include" />
+                <e p="LB_interface.cs" t="Include" />
+                <e p="LB_lang.cs" t="Include" />
+                <e p="LB_yandexPlatform.cs" t="Include" />
+                <e p="LB_yg.cs" t="Include" />
+                <e p="LBPlayerDataYG.cs" t="Include" />
+                <e p="LeaderboardYG.cs" t="Include" />
+                <e p="UtilsLB.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Localization" t="Include">
+              <e p="Example" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="EnvirLangExample.cs" t="Include" />
+                  <e p="LanguageExample.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="Lang_info.cs" t="Include" />
+                <e p="Lang_interface.cs" t="Include" />
+                <e p="Lang_projectSettings.cs" t="Include" />
+                <e p="Lang_yandexPlatform.cs" t="Include" />
+                <e p="Lang_yg.cs" t="Include" />
+                <e p="UtilsLang.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Review" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="Review_interface.cs" t="Include" />
+                <e p="Review_yandexPlatform.cs" t="Include" />
+                <e p="Review_yg.cs" t="Include" />
+                <e p="ReviewYG.cs" t="Include" />
+              </e>
+            </e>
+            <e p="RewardedAdv" t="Include">
+              <e p="Example" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="ExampleRewardedAd.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="RewardedAdv_callingSimulation.cs" t="Include" />
+                <e p="RewardedAdv_info.cs" t="Include" />
+                <e p="RewardedAdv_interface.cs" t="Include" />
+                <e p="RewardedAdv_optionalPlatform.cs" t="Include" />
+                <e p="RewardedAdv_projectSettings.cs" t="Include" />
+                <e p="RewardedAdv_yandexPlatform.cs" t="Include" />
+                <e p="RewardedAdv_yg.cs" t="Include" />
+                <e p="RewardedAdvLockTimer.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Storage" t="Include">
+              <e p="Example" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="SaverTest.cs" t="Include" />
+                  <e p="SavesDataExample.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="SavesYG2.cs" t="Include" />
+                <e p="Storage_info.cs" t="Include" />
+                <e p="Storage_interface.cs" t="Include" />
+                <e p="Storage_projectSettings.cs" t="Include" />
+                <e p="Storage_yandexPlatform.cs" t="Include" />
+                <e p="Storage_yg.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Platforms" t="Include">
+            <e p="YandexGames" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="OwnHost" t="Include">
+                  <e p="OwnHost.cs" t="Include" />
+                </e>
+                <e p="YandexGamePlatform.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Basic" t="Include">
+              <e p="CallAction.cs" t="Include" />
+              <e p="GamePause.cs" t="Include" />
+              <e p="GameplayAPI.cs" t="Include" />
+              <e p="GameReadyAPI.cs" t="Include" />
+              <e p="InitAttributes.cs" t="Include" />
+              <e p="IPlatformsYG2.cs" t="Include" />
+              <e p="OptionalPlatform.cs" t="Include" />
+              <e p="WindowGame.cs" t="Include" />
+              <e p="YG2.cs" t="Include" />
+              <e p="YGInsides.cs" t="Include" />
+              <e p="YGSendMessage.cs" t="Include" />
+            </e>
+            <e p="EditorScr" t="Include">
+              <e p="Attributes" t="Include">
+                <e p="ColorYGAttribute.cs" t="Include" />
+                <e p="HeaderYGAttribute.cs" t="Include" />
+                <e p="LabelYGAttribute.cs" t="Include" />
+                <e p="NestedYGAttribute.cs" t="Include" />
+              </e>
+              <e p="DefineSymbols.cs" t="Include" />
+              <e p="FileYG.cs" t="Include" />
+              <e p="Module.cs" t="Include" />
+              <e p="PluginPrefs.cs" t="Include" />
+              <e p="PrefsList.cs" t="Include" />
+              <e p="TextStyles.cs" t="Include" />
+              <e p="Translates" t="Include">
+                <e p="Langs.cs" t="Include" />
+                <e p="VersionControl_lang.cs" t="Include" />
+              </e>
+              <e p="UnityPackagesManager.cs" t="Include" />
+            </e>
+            <e p="InfoYG" t="Include">
+              <e p="BasicSettings.cs" t="Include" />
+              <e p="InfoYG.cs" t="Include" />
+              <e p="InfoYG_lang.cs" t="Include" />
+              <e p="InfoYGReferences.cs" t="Include" />
+              <e p="SimulationSettings.cs" t="Include" />
+              <e p="TemplateSettings.cs" t="Include" />
+            </e>
+            <e p="Other" t="Include">
+              <e p="AdvCallingSimulation.cs" t="Include" />
+              <e p="EventsYG2.cs" t="Include" />
+              <e p="ImageLoadYG.cs" t="Include" />
+              <e p="PauseGameYG.cs" t="Include" />
+              <e p="PlatformEventsYG2.cs" t="Include" />
+            </e>
+            <e p="Platform" t="Include">
+              <e p="CommonOptions.cs" t="Include" />
+              <e p="PlatformOptions.cs" t="Include" />
+              <e p="PlatformSettings.cs" t="Include" />
+              <e p="PlatformSettings_langs.cs" t="Include" />
+              <e p="PlatformSettingsAttributes.cs" t="Include" />
+              <e p="PlatformToggles.cs" t="Include" />
+              <e p="ProjectSettings.cs" t="Include" />
+            </e>
+            <e p="Server" t="Include">
+              <e p="ModuleJson.cs" t="Include" />
+              <e p="ServerInfo.cs" t="Include" />
+              <e p="ServerJson.cs" t="Include" />
+            </e>
+            <e p="Utils" t="Include">
+              <e p="JsonYG.cs" t="Include" />
+              <e p="LocalStorage_yg.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="YG" t="Include">
+          <e p="SavesYG.cs" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp/Bin" t="ExcludeRecursive" />
+    </e>
+    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.1/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.1/resharper-host/local/Transient/ReSharperHost/v201/SolutionCaches/_.19.00" t="ExcludeRecursive" />
+  </component>
+</project>

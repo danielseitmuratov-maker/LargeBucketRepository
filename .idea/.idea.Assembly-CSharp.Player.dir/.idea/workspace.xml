@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="064bd659-a2c3-4f99-b421-7817842537dc" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Factories/ChunkFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Enemies/BasicEnemyAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Input/AttackButtonHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Enemies/EnemyMovementSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Factories/IFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Interfaces/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Factories/EnemyFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Input/AutoRunButtonHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Character/CharacterRoot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Input/AutoAttackButtonHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Character/CharacterMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Enemies/IEnemyMovementSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Configs/Paths.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Enemies/BasicEnemyAnimator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Character/IMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Character/IEnemyMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/GameStates/BootstrapState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Enemies/IEnemyAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/SpawnPoints/EnemySpawnPointService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Enemies/IEnemyAnimator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Chunks/ActiveNextChunkHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Chunks/FarmZones/FarmZoneRoot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Enemies/BasicEnemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Enemies/BasicEnemyMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Chunks/FarmZones/FarmEntranceHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Pools/ChunkPool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Character/IMovementConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Configs/EnemyConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/SpawnPoints/EnemyFormationType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/SpawnPoints/EnemySpawnFormationParams.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Chunks/ChunkRoot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Spawners/ISpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Pools/IPool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Pools/EnemyPool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Spawners/BasicEnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Configs/CharacterConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/SpawnPoints/IEnemySpawnPointService.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/GameStates/BootstrapState.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Enemies/IEnemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Interfaces/IHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Interfaces/IDamageable.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Enemies/IEnemyAnimator.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Configs/CharacterConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Enemies/BasicEnemyAnimator.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Enemies/IEnemyAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Enemies/BasicEnemyAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Character/IEnemyMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Character/IMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Character/CharacterMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Character/CharacterRoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Enemies/BasicEnemyMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Enemies/IEnemyMovementSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Enemies/EnemyMovementSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Configs/Paths.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Factories/IFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Configs/EnemyConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Factories/EnemyFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Pools/IPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Pools/ChunkPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Pools/EnemyPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/SpawnPoints/IEnemySpawnPointService.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Input/AutoRunButtonHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Input/AttackButtonHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Spawners/BasicEnemySpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Spawners/ISpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Enemies/BasicEnemy.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="3FV70OWU7s4oAXiAOXLyGslA79P" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="RiderCSharpLiveTemplatesSettingsId" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="064bd659-a2c3-4f99-b421-7817842537dc" name="Default Changelist" comment="" />
+      <created>1782148159667</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1782148159667</updated>
+      <workItem from="1782148171620" duration="10680000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="305" y="0" key="RiderGenerateDialog" timestamp="1782160115305">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state x="305" y="0" key="RiderGenerateDialog/0.0.1024.640@0.0.1024.640" timestamp="1782160115305" />
+    <state x="91" y="0" width="840" height="638" key="search.everywhere.popup" timestamp="1782160384462">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state x="91" y="0" width="840" height="638" key="search.everywhere.popup/0.0.1024.640@0.0.1024.640" timestamp="1782160384462" />
+  </component>
+</project>

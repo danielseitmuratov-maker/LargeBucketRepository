@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="31c938c6-0998-4f71-a95f-4e501b44eadd" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Pets/IWeightedRandomService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@6c02063a0a76/Editor/SceneTemplates/Standard/GlobalVolumeProfile.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Infrastructure/Services/ConfigProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Infrastructure/Services/GlobalSettingsService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BAD207A2-A9A6-471C-AF51-917407433DC3/f2/24ea4f1c/Transform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Eggs/IPool.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Infrastructure/Services/IPauseAdsService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Infrastructure/Services/GlobalSettingsHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.subsystems/_Root/_Scripts/Infrastructure/Services/Movement/IMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Infrastructure/IExitableState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Infrastructure/Services/CursorLocker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Infrastructure/Services/SfxPlayer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Infrastructure/Services/ICursorLocker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Infrastructure/Services/ISfxPlayer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Infrastructure/Services/IConfigProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Infrastructure/Services/IGlobalSettingsService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Infrastructure/Services/ThirdCameraFollower.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D74B3E-9AF6-40FF-9C09-5CBD63CD8C5D/90/488dbe72/NavMesh.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Animals/IFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Character/CharacterMovement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5909335F-BDBB-45F0-AAA5-BF52C3EFCCFF/a3/2c50dc69/SerializeField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/847032F4-4B33-4FCD-99BB-CE8619684799/0d/af0fb601/Physics.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@6c02063a0a76/Runtime/UniversalRendererRenderGraph.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@b4d700247d4b/Editor/VisualScripting.Core/Utilities/Paths.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Infrastructure/G.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Pets/FullCustomShaderApplier.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Infrastructure/IState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file:///Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.subsystems/_MyAssets/_Scripts/Infrastructure/Services/Input/MobileInputService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BAD207A2-A9A6-471C-AF51-917407433DC3/5f/f5ba2ac1/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Pets/WeightedRandomService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BAD207A2-A9A6-471C-AF51-917407433DC3/0e/b829dc4d/Resources.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TMP_PackageResourceImporter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TMP_FontAssetUtilities.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@6c02063a0a76/ShaderLibrary/SurfaceInput.hlsl" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BAD207A2-A9A6-471C-AF51-917407433DC3/c6/2e9f9f87/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@b4d700247d4b/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@8d70e2c352d2/Runtime/Debugging/DebugManager.UIState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@be6c4fd0abf5/InputSystem/Utilities/DelegateHelpers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Infrastructure/States/LevelLoader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Infrastructure/States/ILevelLoader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Infrastructure/GameStateMachine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Infrastructure/States/BootstrapState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../_Scripts/Infrastructure/States/GameLoopState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@8017b507cc74/Unity.Mathematics/random.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Character/CharacterAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Character/CharacterGameRoles/States/Murder/IRoleDispatcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Factories/CharacterFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Lobby/GameLobbyRoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Loaders/GameLobbyLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Input/PcInputService.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Timers/IGameLoopTimer.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Fx/FxPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Ui/Core/FortuneWheels/RoleWheel/GameRoleFortuneWheel.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Ui/Core/FortuneWheels/RoleWheel/IFortuneWheelResultPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Ui/Core/FortuneWheels/RoleWheel/IGameRoleFortuneWheelResultPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Configs/GameRoleFortuneWheelConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Ui/Core/FortuneWheels/RoleWheel/GameRoleFortuneWheelSegment.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/GameStates/GameLoopState.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Cameras/MainMenuCharacterCameraHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/GameStates/MainMenuState.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Ui/MainHudHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Ui/Core/FortuneWheels/RoleWheel/CharacterRoleFortuneWheelCameraHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Ui/Core/FortuneWheels/RoleWheel/GameRoleFortuneWheelView.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Ui/Core/FortuneWheels/RoleWheel/GameRoleFortuneWheelRoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Ui/Core/FortuneWheels/RoleWheel/GameRoleFortuneWheelResultPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Character/CharacterRoleAdjuster.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Interfaces/IHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Character/CharacterHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/AI/Core/Components/NpcHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Locations/Hostile/ProtectedObjects/HostileLocationProtectedObjectHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Character/CharacterGameRoles/States/Murder/ICharacterAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/AI/Core/Components/NpcSfxPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Configs/SoundsConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/AI/Core/Components/NpcSfxHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Character/CharacterGameRoles/States/Murder/CharacterAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/AI/Npcs/NpcRoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/AI/Npcs/INpcRoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/AI/Npcs/LobbyNpcRoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Factories/Npcs/PeacefulNpcFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/Services/Factories/Npcs/LobbyNpcFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Infrastructure/GameStates/BootstrapState.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Character/CharacterGameRoles/States/Murder/MurderRoleDispatcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/AI/Core/Components/NpcVfxHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Configs/DoTweenAnimationsConfigConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Configs/VfxConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Character/CharacterAnimator.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Configs/ShaderChangerConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Configs/DoTweenAnimationsConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/AI/Npcs/PeacefulNpcRoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Configs/Paths.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/AI/Core/Components/NpcVisualHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Tools/ShaderTools/FullCustomShaderApplier.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/AI/Npcs/Core/NpcHealthShaderChanger.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Core/Character/CharacterRoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/_Scripts/Tools/ShaderTools/InteractiveObjectShaderApplier.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="3FEUR2DsfiNrAzsHB8eB9G0FOX6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3504823" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010718" />
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="RiderCSharpLiveTemplatesSettingsId" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="31c938c6-0998-4f71-a95f-4e501b44eadd" name="Default Changelist" comment="" />
+      <created>1781639711448</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1781639711448</updated>
+      <workItem from="1781639759710" duration="2792000" />
+      <workItem from="1781717353986" duration="4964000" />
+      <workItem from="1781725933540" duration="163000" />
+      <workItem from="1781726129694" duration="122000" />
+      <workItem from="1781726393197" duration="90000" />
+      <workItem from="1781726902143" duration="21000" />
+      <workItem from="1781726982539" duration="3322000" />
+      <workItem from="1781807911743" duration="5149000" />
+      <workItem from="1781841294564" duration="332000" />
+      <workItem from="1781886525521" duration="2478000" />
+      <workItem from="1781974016538" duration="20832000" />
+      <workItem from="1782045372324" duration="2210000" />
+      <workItem from="1782067701125" duration="7008000" />
+      <workItem from="1782131806530" duration="1852000" />
+      <workItem from="1782137647949" duration="171000" />
+      <workItem from="1782137901218" duration="158000" />
+      <workItem from="1782138831652" duration="407000" />
+      <workItem from="1782139642758" duration="150000" />
+      <workItem from="1782140016503" duration="188000" />
+      <workItem from="1782140497185" duration="157000" />
+      <workItem from="1782140881900" duration="944000" />
+      <workItem from="1782142238343" duration="361000" />
+      <workItem from="1782147477356" duration="78000" />
+      <workItem from="1782147615171" duration="156000" />
+      <workItem from="1782147817446" duration="275000" />
+      <workItem from="1782160522587" duration="9737000" />
+      <workItem from="1782231782671" duration="10795000" />
+      <workItem from="1783279738744" duration="2605000" />
+      <workItem from="1783310621153" duration="3238000" />
+      <workItem from="1785007420853" duration="689000" />
+      <workItem from="1785351675562" duration="4740000" />
+      <workItem from="1785443464423" duration="2412000" />
+      <workItem from="1785458801451" duration="281000" />
+      <workItem from="1785662531460" duration="16028000" />
+      <workItem from="1785699305109" duration="530000" />
+      <workItem from="1786026625504" duration="16325000" />
+      <workItem from="1786261033048" duration="3603000" />
+      <workItem from="1786264893578" duration="3851000" />
+      <workItem from="1786268817890" duration="3987000" />
+      <workItem from="1786282366877" duration="18078000" />
+      <workItem from="1786392818263" duration="1679000" />
+      <workItem from="1786470304954" duration="5111000" />
+      <workItem from="1786478364900" duration="327000" />
+      <workItem from="1786613903445" duration="20547000" />
+      <workItem from="1786823602252" duration="9397000" />
+      <workItem from="1786957412759" duration="3394000" />
+      <workItem from="1787044685391" duration="29171000" />
+      <workItem from="1787115034217" duration="964000" />
+      <workItem from="1787161576901" duration="5723000" />
+      <workItem from="1787201804352" duration="20485000" />
+      <workItem from="1787507485185" duration="2954000" />
+      <workItem from="1787565361964" duration="10719000" />
+      <workItem from="1787828295743" duration="34526000" />
+      <workItem from="1788287553854" duration="7233000" />
+      <workItem from="1788412774054" duration="11794000" />
+      <workItem from="1788579597195" duration="5915000" />
+      <workItem from="1788757841523" duration="287000" />
+      <workItem from="1788888244744" duration="5140000" />
+      <workItem from="1789042124982" duration="3420000" />
+      <workItem from="1789060825240" duration="5317000" />
+      <workItem from="1789148116937" duration="4569000" />
+      <workItem from="1789274168365" duration="2844000" />
+      <workItem from="1789550717426" duration="9580000" />
+      <workItem from="1789756889159" duration="12000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="224" y="168" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1781974140589">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state x="224" y="168" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1024.640@0.0.1024.640" timestamp="1781974140589" />
+    <state width="972" height="180" key="GridCell.Tab.0.bottom" timestamp="1787079525401">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state width="972" height="180" key="GridCell.Tab.0.bottom/0.0.1024.640@0.0.1024.640" timestamp="1787079525401" />
+    <state width="972" height="180" key="GridCell.Tab.0.center" timestamp="1787079525399">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state width="972" height="180" key="GridCell.Tab.0.center/0.0.1024.640@0.0.1024.640" timestamp="1787079525399" />
+    <state width="972" height="180" key="GridCell.Tab.0.left" timestamp="1787079525394">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state width="972" height="180" key="GridCell.Tab.0.left/0.0.1024.640@0.0.1024.640" timestamp="1787079525394" />
+    <state width="972" height="180" key="GridCell.Tab.0.right" timestamp="1787079525399">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state width="972" height="180" key="GridCell.Tab.0.right/0.0.1024.640@0.0.1024.640" timestamp="1787079525399" />
+    <state width="972" height="180" key="GridCell.Tab.1.bottom" timestamp="1787079525405">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state width="972" height="180" key="GridCell.Tab.1.bottom/0.0.1024.640@0.0.1024.640" timestamp="1787079525405" />
+    <state width="972" height="180" key="GridCell.Tab.1.center" timestamp="1787079525404">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state width="972" height="180" key="GridCell.Tab.1.center/0.0.1024.640@0.0.1024.640" timestamp="1787079525404" />
+    <state width="972" height="180" key="GridCell.Tab.1.left" timestamp="1787079525403">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state width="972" height="180" key="GridCell.Tab.1.left/0.0.1024.640@0.0.1024.640" timestamp="1787079525403" />
+    <state width="972" height="180" key="GridCell.Tab.1.right" timestamp="1787079525404">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state width="972" height="180" key="GridCell.Tab.1.right/0.0.1024.640@0.0.1024.640" timestamp="1787079525404" />
+    <state width="972" height="180" key="GridCell.Tab.2.bottom" timestamp="1787079525410">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state width="972" height="180" key="GridCell.Tab.2.bottom/0.0.1024.640@0.0.1024.640" timestamp="1787079525410" />
+    <state width="972" height="180" key="GridCell.Tab.2.center" timestamp="1787079525407">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state width="972" height="180" key="GridCell.Tab.2.center/0.0.1024.640@0.0.1024.640" timestamp="1787079525407" />
+    <state width="972" height="180" key="GridCell.Tab.2.left" timestamp="1787079525406">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state width="972" height="180" key="GridCell.Tab.2.left/0.0.1024.640@0.0.1024.640" timestamp="1787079525406" />
+    <state width="972" height="180" key="GridCell.Tab.2.right" timestamp="1787079525407">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state width="972" height="180" key="GridCell.Tab.2.right/0.0.1024.640@0.0.1024.640" timestamp="1787079525407" />
+    <state width="972" height="180" key="GridCell.Tab.3.bottom" timestamp="1787079525413">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state width="972" height="180" key="GridCell.Tab.3.bottom/0.0.1024.640@0.0.1024.640" timestamp="1787079525413" />
+    <state width="972" height="180" key="GridCell.Tab.3.center" timestamp="1787079525412">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state width="972" height="180" key="GridCell.Tab.3.center/0.0.1024.640@0.0.1024.640" timestamp="1787079525412" />
+    <state width="972" height="180" key="GridCell.Tab.3.left" timestamp="1787079525411">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state width="972" height="180" key="GridCell.Tab.3.left/0.0.1024.640@0.0.1024.640" timestamp="1787079525411" />
+    <state width="972" height="180" key="GridCell.Tab.3.right" timestamp="1787079525413">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state width="972" height="180" key="GridCell.Tab.3.right/0.0.1024.640@0.0.1024.640" timestamp="1787079525413" />
+    <state x="0" y="0" key="RiderGenerateDialog" timestamp="1789064981743">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state x="0" y="0" key="RiderGenerateDialog/0.0.1024.564@0.0.1024.564" timestamp="1786035643818" />
+    <state x="0" y="0" key="RiderGenerateDialog/0.0.1024.640@0.0.1024.640" timestamp="1789064981743" />
+    <state x="503" y="0" key="RiderGenerateDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1785358369155" />
+    <state x="0" y="0" key="SettingsEditor" timestamp="1787053273980">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state x="0" y="0" key="SettingsEditor/0.0.1024.640@0.0.1024.640" timestamp="1787053273980" />
+    <state x="100" y="100" width="824" height="440" key="dock-window-1" timestamp="1787835936703">
+      <screen x="0" y="0" width="1024" height="565" />
+    </state>
+    <state x="100" y="100" width="824" height="440" key="dock-window-1/0.0.1024.565@0.0.1024.565" timestamp="1787835936703" />
+    <state x="100" y="100" width="824" height="440" key="dock-window-1/0.0.1024.640@0.0.1024.640" timestamp="1782234026140" />
+    <state x="100" y="100" width="824" height="440" key="dock-window-2" timestamp="1788024388066">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state x="100" y="100" width="824" height="440" key="dock-window-2/0.0.1024.640@0.0.1024.640" timestamp="1788024388066" />
+    <state x="0" y="0" width="1024" height="640" key="find.popup" timestamp="1786476604030">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state x="0" y="0" width="1024" height="640" key="find.popup/0.0.1024.640@0.0.1024.640" timestamp="1786476604030" />
+    <state x="92" y="160" key="run.anything.popup" timestamp="1789064074281">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state x="92" y="141" key="run.anything.popup/0.0.1024.564@0.0.1024.564" timestamp="1785665716057" />
+    <state x="92" y="160" key="run.anything.popup/0.0.1024.640@0.0.1024.640" timestamp="1789064074281" />
+    <state x="91" y="0" width="840" height="638" key="search.everywhere.popup" timestamp="1789756863142">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state x="91" y="0" width="840" height="562" key="search.everywhere.popup/0.0.1024.564@0.0.1024.564" timestamp="1785686825420" />
+    <state x="91" y="0" width="840" height="567" key="search.everywhere.popup/0.0.1024.568@0.0.1024.568" timestamp="1789553167114" />
+    <state x="91" y="0" width="840" height="638" key="search.everywhere.popup/0.0.1024.640@0.0.1024.640" timestamp="1789756863142" />
+    <state x="149" y="0" width="1379" height="1047" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1783543700428" />
+    <state x="149" y="0" width="1379" height="1047" key="search.everywhere.popup/0.0.1680.974@0.0.1680.974" timestamp="1783310870507" />
+    <state x="171" y="0" width="1575" height="1197" key="search.everywhere.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1785459065790" />
+  </component>
+</project>
