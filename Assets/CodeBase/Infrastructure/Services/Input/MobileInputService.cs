@@ -1,8 +1,9 @@
 using System;
+using _Root._Scripts.Infrastructure.Services.Input;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace _Root._Scripts.Infrastructure.Services.Input
+namespace CodeBase.Infrastructure.Services.Input
 {
     public class MobileInputService : IInputService, IDisposable
     {

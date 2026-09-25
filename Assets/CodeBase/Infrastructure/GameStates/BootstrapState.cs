@@ -24,6 +24,7 @@ using _Root._Scripts.Infrastructure.Services.Timers;
 using _Root._Scripts.Infrastructure.Services.WeightedRandom;
 using _Root._Scripts.Ui;
 using _Root._Scripts.Ui.Core.FortuneWheels.RoleWheel;
+using CodeBase.Infrastructure.Services.Input;
 using UnityEngine;
 using UnityEngine.Audio;
 using YG;
