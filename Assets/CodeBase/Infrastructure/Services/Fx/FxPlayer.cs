@@ -6,7 +6,7 @@ namespace _Root._Scripts.Infrastructure.Services.Fx
 {
     public class FxPlayer : IFxPlayer
     {
-        private readonly ICoroutineRunner _coroutineRunner;
+        private readonly ICoroutineRunnerService _coroutineRunnerService;
         private readonly Transform _poolParent;
         private readonly Queue<ParticleSystem> _pool = new Queue<ParticleSystem>();
         private readonly HashSet<ParticleSystem> _activeSystems = new HashSet<ParticleSystem>(); 
@@ -15,9 +15,9 @@ namespace _Root._Scripts.Infrastructure.Services.Fx
 
         private readonly WaitForSeconds _checkInterval = new WaitForSeconds(0.1f);
 
-        public FxPlayer(ICoroutineRunner coroutineRunner, Transform poolParent = null)
+        public FxPlayer(ICoroutineRunnerService coroutineRunnerService, Transform poolParent = null)
         {
-            _coroutineRunner = coroutineRunner;
+            _coroutineRunnerService = coroutineRunnerService;
             _poolParent = poolParent ? poolParent : new GameObject("FxPool").transform;
         }
 
@@ -67,7 +67,7 @@ namespace _Root._Scripts.Infrastructure.Services.Fx
 
             _activeSystems.Add(system);
 
-            _coroutineRunner.StartCoroutine(AutoReturnRoutine(system));
+            _coroutineRunnerService.StartCoroutine(AutoReturnRoutine(system));
         }
 
 
@@ -84,7 +84,7 @@ namespace _Root._Scripts.Infrastructure.Services.Fx
             foreach (var prefab in particleSystems)
             {
                 if (prefab == null) continue;
-                _coroutineRunner.StartCoroutine(PlayWithDelay(prefab, position, delay));
+                _coroutineRunnerService.StartCoroutine(PlayWithDelay(prefab, position, delay));
             }
         }
 

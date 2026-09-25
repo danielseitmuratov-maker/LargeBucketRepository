@@ -2,12 +2,14 @@ using _Root._Scripts.Infrastructure.GameStates;
 using _Root._Scripts.Infrastructure.Services.Input;
 using _Root._Scripts.Ui;
 using _Root._Scripts.Ui.Core.FortuneWheels.RoleWheel;
+using CodeBase.Infrastructure;
+using CodeBase.Infrastructure.GameStates;
 using UnityEngine;
 using UnityEngine.Audio;
 
 namespace _Root._Scripts.Infrastructure
 {
-    public class Bootstrap : MonoBehaviour, ICoroutineRunner
+    public class Bootstrap : MonoBehaviour, ICoroutineRunnerService
     {
         [Header("Tests")]
         [SerializeField] private GameTester _gameTester;

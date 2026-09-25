@@ -20,20 +20,20 @@ namespace _Root._Scripts.Infrastructure.Services.Factories
 
         private CharacterConfig _config;
         private CharacterRoot _prefab;
-        private ICoroutineRunner _coroutineRunner;
+        private ICoroutineRunnerService _coroutineRunnerService;
         private IRoleDispatcher _roleDispatcher;
         private IGameRoleFortuneWheel _gameRoleFortuneWheel;
         private IFxPlayer _fxPlayer;
 
         public CharacterFactory(IConfigProvider configProvider, IInputService inputService,
-            ISaveLoadService saveLoadService, ISfxPlayer sfxPlayer, ICoroutineRunner coroutineRunner,
+            ISaveLoadService saveLoadService, ISfxPlayer sfxPlayer, ICoroutineRunnerService coroutineRunnerService,
             IGameRoleFortuneWheel gameRoleFortuneWheel, IFxPlayer fxPlayer)
         {
             _configProvider = configProvider;
             _inputService = inputService;
             _saveLoadService = saveLoadService;
             _sfxPlayer = sfxPlayer;
-            _coroutineRunner = coroutineRunner;
+            _coroutineRunnerService = coroutineRunnerService;
             _gameRoleFortuneWheel = gameRoleFortuneWheel;
             _fxPlayer = fxPlayer;
 
@@ -57,7 +57,7 @@ namespace _Root._Scripts.Infrastructure.Services.Factories
 
         private void InitRoot(CharacterRoot characterRoot)
         {
-            characterRoot.Init(_inputService, _saveLoadService, _configProvider, _sfxPlayer, _coroutineRunner,
+            characterRoot.Init(_inputService, _saveLoadService, _configProvider, _sfxPlayer, _coroutineRunnerService,
                 _gameRoleFortuneWheel, _fxPlayer);
         }
 

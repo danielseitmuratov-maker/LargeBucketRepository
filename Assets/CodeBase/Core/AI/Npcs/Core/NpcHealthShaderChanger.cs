@@ -24,16 +24,16 @@ namespace _Root._Scripts.Core.AI.Npcs.Core
 
         private IHealth _health;
         private IConfigProvider _configProvider;
-        private ICoroutineRunner _coroutineRunner;
+        private ICoroutineRunnerService _coroutineRunnerService;
 
         private Coroutine _flashCoroutine;
         private ShaderChangerConfig _config;
 
-        public void Init(IHealth health, IConfigProvider configProvider, ICoroutineRunner coroutineRunner)
+        public void Init(IHealth health, IConfigProvider configProvider, ICoroutineRunnerService coroutineRunnerService)
         {
             _health = health;
             _configProvider = configProvider;
-            _coroutineRunner = coroutineRunner;
+            _coroutineRunnerService = coroutineRunnerService;
 
             GetConfig();
             SetUpValues();
@@ -82,9 +82,9 @@ namespace _Root._Scripts.Core.AI.Npcs.Core
                 return;
 
             if (_flashCoroutine != null)
-                _coroutineRunner.StopCoroutine(_flashCoroutine);
+                _coroutineRunnerService.StopCoroutine(_flashCoroutine);
 
-            _flashCoroutine = _coroutineRunner.StartCoroutine(FlashDamageEffect());
+            _flashCoroutine = _coroutineRunnerService.StartCoroutine(FlashDamageEffect());
         }
 
         private IEnumerator FlashDamageEffect()
@@ -110,7 +110,7 @@ namespace _Root._Scripts.Core.AI.Npcs.Core
             UnsubscribeFromEvents();
 
             if (_flashCoroutine != null)
-                _coroutineRunner.StopCoroutine(_flashCoroutine);
+                _coroutineRunnerService.StopCoroutine(_flashCoroutine);
 
             if (_shaderApplier != null)
             {

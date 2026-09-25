@@ -15,7 +15,7 @@ namespace _Root._Scripts.Infrastructure.Services.Sfx.Base
         private readonly ICoroutineRunner _coroutineRunner;
         private GameObject _parentObject;
 
-        public SfxPlayer(AudioMixerGroup sfxGroup,ICoroutineRunner coroutineRunner,  int poolSize = 10)
+        public SfxPlayer(AudioMixerGroup sfxGroup,ICoroutineRunner coroutineRunner,  int poolSize = 100)
         {
             _sfxGroup = sfxGroup;
             _coroutineRunner = coroutineRunner;

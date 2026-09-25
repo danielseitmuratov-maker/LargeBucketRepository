@@ -49,7 +49,7 @@ namespace _Root._Scripts.Core.Character
         private ICharacterSfxPlayer _characterSfxPlayer;
         private IConfigProvider _configProvider;
         private ISfxPlayer _sfxPlayer;
-        private ICoroutineRunner _coroutineRunner;
+        private ICoroutineRunnerService _coroutineRunnerService;
         private ICharacterAttack _attack;
         private IRoleDispatcher _roleDispatcher;
         private IGameRoleFortuneWheel _gameRoleFortuneWheel;
@@ -57,14 +57,14 @@ namespace _Root._Scripts.Core.Character
         private IFxPlayer _fxPlayer;
 
         public void Init(IInputService inputService, ISaveLoadService saveLoadService, IConfigProvider configProvider,
-            ISfxPlayer sfxPlayer, ICoroutineRunner coroutineRunner,
+            ISfxPlayer sfxPlayer, ICoroutineRunnerService coroutineRunnerService,
             IGameRoleFortuneWheel gameRoleFortuneWheel, IFxPlayer fxPlayer)
         {
             _inputService = inputService;
             _saveLoadService = saveLoadService;
             _configProvider = configProvider;
             _sfxPlayer = sfxPlayer;
-            _coroutineRunner = coroutineRunner;
+            _coroutineRunnerService = coroutineRunnerService;
             _gameRoleFortuneWheel = gameRoleFortuneWheel;
             _fxPlayer = fxPlayer;
 
@@ -87,7 +87,7 @@ namespace _Root._Scripts.Core.Character
             _camera.Init();
             _camera.SetFollowTransform(_cameraFollowPoint);
 
-            _teleporter = new СharacterTeleporter(_motor.transform, _coroutineRunner);
+            _teleporter = new СharacterTeleporter(_motor.transform, _coroutineRunnerService);
             _health = new CharacterHealth();
             _movement = new CharacterMovement(_inputService, _configProvider);
             _attack = new CharacterAttack(transform, _configProvider);
@@ -146,7 +146,7 @@ namespace _Root._Scripts.Core.Character
                 case GameRole.Murder:
                 {
                     _roleDispatcher = new MurderRoleDispatcher( gameRole, _fxPlayer, _characterSfxPlayer,
-                        _configProvider, transform, _coroutineRunner,_attack,_inputService);
+                        _configProvider, transform, _coroutineRunnerService,_attack,_inputService);
                     Debug.Log($"current roleDispatcher : {_roleDispatcher} ");
                     break;
                 }

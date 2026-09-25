@@ -6,6 +6,7 @@ using _Root._Scripts.Core.Character;
 using _Root._Scripts.Core.GameMap;
 using _Root._Scripts.Core.Lobby;
 using _Root._Scripts.Core.Roles;
+using _Root._Scripts.Infrastructure;
 using _Root._Scripts.Infrastructure.Services.ConfigProviding;
 using _Root._Scripts.Infrastructure.Services.Factories;
 using _Root._Scripts.Infrastructure.Services.Loaders;
@@ -19,7 +20,7 @@ using Unity.AI.Navigation;
 using UnityEngine;
 using YG;
 
-namespace _Root._Scripts.Infrastructure.GameStates
+namespace CodeBase.Infrastructure.GameStates
 {
     public class GameLoopState : IState, IDisposable
     {
@@ -34,7 +35,6 @@ namespace _Root._Scripts.Infrastructure.GameStates
         private readonly IRandomNavMeshPointService _randomNavMeshPointService;
 
         private NavMeshSurface _currentNavMeshSurface;
-        private SavesYG _data;
 
         private GameRole _characterRole;
         private GameLogicConfig _gameLogicConfig;
@@ -70,7 +70,6 @@ namespace _Root._Scripts.Infrastructure.GameStates
             _globalNpcContextProvider = globalNpcContextProvider;
             _stateMachine = stateMachine;
 
-            _data = _saveLoadService.Data;
 
             GetGameLogicConfig();
             SetUpStartValues();

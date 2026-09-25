@@ -12,18 +12,18 @@ namespace _Root._Scripts.Infrastructure.Services.Npc.Providers
     {
         private readonly IGameLoopTimer _gameLoopTimer;
         private readonly IConfigProvider _configProvider;
-        private readonly ICoroutineRunner _coroutineRunner;
+        private readonly ICoroutineRunnerService _coroutineRunnerService;
         private GlobalNpcContext _globalContext;
         
         private GameLogicConfig _gameLogicConfig;
         private Coroutine _updateRoutine;
         private bool _isContextUpdating;
 
-        public GlobalNpcContextProvider(IGameLoopTimer gameLoopTimer,IConfigProvider configProvider,ICoroutineRunner coroutineRunner)
+        public GlobalNpcContextProvider(IGameLoopTimer gameLoopTimer,IConfigProvider configProvider,ICoroutineRunnerService coroutineRunnerService)
         {
             _gameLoopTimer = gameLoopTimer;
             _configProvider = configProvider;
-            _coroutineRunner = coroutineRunner;
+            _coroutineRunnerService = coroutineRunnerService;
 
             _gameLogicConfig = _configProvider.GetConfig<GameLogicConfig>(Paths.GlobalValues.GameLogicConfigPath);
 
@@ -37,13 +37,13 @@ namespace _Root._Scripts.Infrastructure.Services.Npc.Providers
         public void StartUpdateContext()
         {
             _isContextUpdating = true;
-            _updateRoutine = _coroutineRunner.StartCoroutine(UpdateContextValuesRoutine());
+            _updateRoutine = _coroutineRunnerService.StartCoroutine(UpdateContextValuesRoutine());
         }
 
         public void StopUpdateContext()
         {
             _isContextUpdating = false;
-            _coroutineRunner.StopCoroutine(_updateRoutine);
+            _coroutineRunnerService.StopCoroutine(_updateRoutine);
         }
 
         private IEnumerator UpdateContextValuesRoutine()
@@ -73,8 +73,8 @@ namespace _Root._Scripts.Infrastructure.Services.Npc.Providers
 
         public void Dispose()
         {
-            if (_coroutineRunner != null) 
-                _coroutineRunner.StopCoroutine(_updateRoutine);
+            if (_coroutineRunnerService != null) 
+                _coroutineRunnerService.StopCoroutine(_updateRoutine);
         }
     }
 }

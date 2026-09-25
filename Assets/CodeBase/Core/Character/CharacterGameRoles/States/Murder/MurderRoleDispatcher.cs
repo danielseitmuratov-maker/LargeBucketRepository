@@ -17,7 +17,7 @@ namespace _Root._Scripts.Core.Character.CharacterGameRoles.States.Murder
         private readonly ICharacterSfxPlayer _sfxPlayer;
         private readonly IConfigProvider _configProvider;
         private readonly Transform _characterTransform;
-        private readonly ICoroutineRunner _coroutineRunner;
+        private readonly ICoroutineRunnerService _coroutineRunnerService;
         private readonly ICharacterAttack _characterAttack;
         private readonly IInputService _inputService;
 
@@ -31,14 +31,14 @@ namespace _Root._Scripts.Core.Character.CharacterGameRoles.States.Murder
 
         public MurderRoleDispatcher(GameRole gameRole, IFxPlayer fxPlayer,
             ICharacterSfxPlayer sfxPlayer, IConfigProvider configProvider, Transform characterTransform,
-            ICoroutineRunner coroutineRunner, ICharacterAttack characterAttack,IInputService inputService)
+            ICoroutineRunnerService coroutineRunnerService, ICharacterAttack characterAttack,IInputService inputService)
         {
             _currentGameRole = gameRole;
             _fxPlayer = fxPlayer;
             _sfxPlayer = sfxPlayer;
             _configProvider = configProvider;
             _characterTransform = characterTransform;
-            _coroutineRunner = coroutineRunner;
+            _coroutineRunnerService = coroutineRunnerService;
             _characterAttack = characterAttack;
             _inputService = inputService;
 
@@ -83,7 +83,7 @@ namespace _Root._Scripts.Core.Character.CharacterGameRoles.States.Murder
 
         private void PlayAttackFx()
         {
-            _attackRoutine = _coroutineRunner.StartCoroutine(AttackFxCoroutine());
+            _attackRoutine = _coroutineRunnerService.StartCoroutine(AttackFxCoroutine());
         }
 
         private IEnumerator AttackFxCoroutine()
@@ -109,9 +109,9 @@ namespace _Root._Scripts.Core.Character.CharacterGameRoles.States.Murder
         {
             UnsubscribeFromEvents();
 
-            if (_coroutineRunner != null && _attackRoutine != null)
+            if (_coroutineRunnerService != null && _attackRoutine != null)
             {
-                _coroutineRunner.StopCoroutine(_attackRoutine);
+                _coroutineRunnerService.StopCoroutine(_attackRoutine);
                 _attackRoutine = null;
             }
 

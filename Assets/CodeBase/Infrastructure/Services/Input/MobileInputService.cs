@@ -33,9 +33,7 @@ namespace CodeBase.Infrastructure.Services.Input
 
             _input = new GameInput();
             _input.Enable();
-
-            _input.Player.Swipe.performed += OnSwipePerformed;
-
+            
             _jumpButton.Performed += OnJumpPerformed;
             _attackButton.Performed += OnAttackPerformed;
             _autoAttackButton.Performed += OnAutoAttackPerformed;
@@ -53,7 +51,7 @@ namespace CodeBase.Infrastructure.Services.Input
             _input.Player.Zoom.ReadValue<Vector2>();
         
         public Vector2 ReadCameraRotation() => 
-            _input.Player.CameraRotation.ReadValue<Vector2>();
+            _input.Player.RotateCamera.ReadValue<Vector2>();
 
         private void OnSwipePerformed(InputAction.CallbackContext context)
         {
@@ -81,7 +79,6 @@ namespace CodeBase.Infrastructure.Services.Input
 
         public void Dispose()
         {
-            _input.Player.Swipe.performed -= OnSwipePerformed;
             _jumpButton.Performed -= OnJumpPerformed;
             _attackButton.Performed -= OnAttackPerformed;
             _autoAttackButton.Performed -= OnAutoAttackPerformed;

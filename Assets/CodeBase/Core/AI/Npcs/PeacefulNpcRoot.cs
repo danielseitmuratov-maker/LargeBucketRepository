@@ -38,7 +38,7 @@ namespace _Root._Scripts.Core.AI.Npcs
 
 
         private IRandomNavMeshPointService _randomNavMeshPointService;
-        private ICoroutineRunner _coroutineRunner;
+        private ICoroutineRunnerService _coroutineRunnerService;
 
         private INpcBrain _npcBrain;
         private NpcContext _localContext;
@@ -50,13 +50,13 @@ namespace _Root._Scripts.Core.AI.Npcs
 
         public void Init(IConfigProvider configProvider, INpcBehavioursProvider npcBehavioursProvider,
             INpcStateMachineRegistrar stateMachineRegistrar, IGlobalNpcContextProvider globalNpcContextProvider,
-            IRandomNavMeshPointService randomNavMeshPointService, ICoroutineRunner coroutineRunner,
+            IRandomNavMeshPointService randomNavMeshPointService, ICoroutineRunnerService coroutineRunnerService,
             IGameMapSpecialPointsProvider gameMapSpecialPointsProvider,ISfxPlayer sfxPlayer,IFxPlayer fxPlayer)
         {
             base.Init(configProvider,npcBehavioursProvider,stateMachineRegistrar,globalNpcContextProvider, sfxPlayer, fxPlayer);
 
             _randomNavMeshPointService = randomNavMeshPointService;
-            _coroutineRunner = coroutineRunner;
+            _coroutineRunnerService = coroutineRunnerService;
             _gameMapSpecialPointsProvider = gameMapSpecialPointsProvider;
 
             SetUpLocalContext();
@@ -101,13 +101,13 @@ namespace _Root._Scripts.Core.AI.Npcs
             _motor.Init();
             _controller.Init();
             _animationPlayer.Init();
-            _healthShaderChanger.Init(_health, ConfigProvider, _coroutineRunner);
+            _healthShaderChanger.Init(_health, ConfigProvider, _coroutineRunnerService);
 
             _npcBrain = new PeacefulNpcBrain(ConfigProvider, NpcBehavioursProvider, Registrar, GlobalNpcContextProvider,
                 _localContext);
 
             _npcSfxHandler = new NpcSfxHandler(SfxPlayer, ConfigProvider, _health, transform);
-            _npcVfxHandler = new NpcVfxHandler(FxPlayer,ConfigProvider,_health,transform,_coroutineRunner);
+            _npcVfxHandler = new NpcVfxHandler(FxPlayer,ConfigProvider,_health,transform,_coroutineRunnerService);
             _npcVisualHandler = new NpcVisualHandler(ConfigProvider,_health,transform);
         }
 

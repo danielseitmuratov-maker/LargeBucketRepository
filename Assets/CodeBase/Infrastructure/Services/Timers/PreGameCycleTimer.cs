@@ -13,7 +13,7 @@ namespace _Root._Scripts.Infrastructure.Services.Timers
         public bool IsRunning => _isRunning;
         
         private readonly IConfigProvider _configProvider;
-        private readonly ICoroutineRunner _coroutineRunner;
+        private readonly ICoroutineRunnerService _coroutineRunnerService;
         private TimerConfig _config;
 
         private float _currentTime;
@@ -23,10 +23,10 @@ namespace _Root._Scripts.Infrastructure.Services.Timers
         public event Action<float> TimeUpdated;
         public event Action OnCompleted;
 
-        public PreGameCycleTimer(IConfigProvider configProvider, ICoroutineRunner coroutineRunner)
+        public PreGameCycleTimer(IConfigProvider configProvider, ICoroutineRunnerService coroutineRunnerService)
         {
             _configProvider = configProvider;
-            _coroutineRunner = coroutineRunner;
+            _coroutineRunnerService = coroutineRunnerService;
             _config = _configProvider.GetConfig<TimerConfig>(Paths.Timers.TimerConfigPath);
         }
 
@@ -36,7 +36,7 @@ namespace _Root._Scripts.Infrastructure.Services.Timers
 
             _currentTime = _config.StandardPreGameCycleTime;
             _isRunning = true;
-            _countdownCoroutine = _coroutineRunner.StartCoroutine(CountdownCoroutine());
+            _countdownCoroutine = _coroutineRunnerService.StartCoroutine(CountdownCoroutine());
         }
 
         private IEnumerator CountdownCoroutine()
@@ -62,7 +62,7 @@ namespace _Root._Scripts.Infrastructure.Services.Timers
                 return;
 
             if (_countdownCoroutine != null)
-                _coroutineRunner.StopCoroutine(_countdownCoroutine);
+                _coroutineRunnerService.StopCoroutine(_countdownCoroutine);
 
             _isRunning = false;
             _countdownCoroutine = null;

@@ -1,6 +1,8 @@
 using System;
 using _Root._Scripts.Infrastructure.Services.Input;
 using _Root._Scripts.Ui;
+using CodeBase.Infrastructure;
+using CodeBase.Infrastructure.GameStates;
 
 namespace _Root._Scripts.Infrastructure.GameStates
 {

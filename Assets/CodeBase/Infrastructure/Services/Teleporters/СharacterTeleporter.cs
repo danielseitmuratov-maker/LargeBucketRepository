@@ -8,15 +8,15 @@ namespace _Root._Scripts.Infrastructure.Services.Teleporters
     public class СharacterTeleporter : ITeleporter, IDisposable
     {
         private readonly Transform _target;
-        private readonly ICoroutineRunner _coroutineRunner;
+        private readonly ICoroutineRunnerService _coroutineRunnerService;
 
         private Coroutine _delayRoutine;
         private KinematicCharacterMotor _motor;
 
-        public СharacterTeleporter(Transform target, ICoroutineRunner coroutineRunner)
+        public СharacterTeleporter(Transform target, ICoroutineRunnerService coroutineRunnerService)
         {
             _target = target;
-            _coroutineRunner = coroutineRunner;
+            _coroutineRunnerService = coroutineRunnerService;
         }
 
         public Vector3 Teleport(Vector3 to, float delay = 0f)
@@ -24,16 +24,16 @@ namespace _Root._Scripts.Infrastructure.Services.Teleporters
             if (_target == null)
                 return Vector3.zero;
 
-            if (delay <= 0f || _coroutineRunner == null)
+            if (delay <= 0f || _coroutineRunnerService == null)
             {
                 _target.position = to;
                 return _target.position;
             }
 
             if (_delayRoutine != null)
-                _coroutineRunner.StopCoroutine(_delayRoutine);
+                _coroutineRunnerService.StopCoroutine(_delayRoutine);
 
-            _delayRoutine = _coroutineRunner.StartCoroutine(TeleportWithDelay(to, delay));
+            _delayRoutine = _coroutineRunnerService.StartCoroutine(TeleportWithDelay(to, delay));
 
             return _target.position;
         }
@@ -56,9 +56,9 @@ namespace _Root._Scripts.Infrastructure.Services.Teleporters
 
         public void Dispose()
         {
-            if (_delayRoutine != null && _coroutineRunner != null)
+            if (_delayRoutine != null && _coroutineRunnerService != null)
             {
-                _coroutineRunner.StopCoroutine(_delayRoutine);
+                _coroutineRunnerService.StopCoroutine(_delayRoutine);
                 _delayRoutine = null;
             }
         }

@@ -17,7 +17,7 @@ namespace _Root._Scripts.Infrastructure.Services.Factories.Npcs
         private readonly INpcBehavioursProvider _npcBehavioursProvider;
         private readonly INpcStateMachineRegistrar _registrar;
         private readonly IGlobalNpcContextProvider _globalNpcContextProvider;
-        private readonly ICoroutineRunner _coroutineRunner;
+        private readonly ICoroutineRunnerService _coroutineRunnerService;
         private readonly IRandomNavMeshPointService _randomNavMeshPointService;
         private readonly IConfigProvider _configProvider;
 
@@ -28,14 +28,14 @@ namespace _Root._Scripts.Infrastructure.Services.Factories.Npcs
         private IFxPlayer _fxPlayer;
 
         public PeacefulNpcFactory(INpcBehavioursProvider npcBehavioursProvider, INpcStateMachineRegistrar registrar,
-            IGlobalNpcContextProvider globalNpcContextProvider, ICoroutineRunner coroutineRunner,
+            IGlobalNpcContextProvider globalNpcContextProvider, ICoroutineRunnerService coroutineRunnerService,
             IRandomNavMeshPointService randomNavMeshPointService, IConfigProvider configProvider,
             IGameMapSpecialPointsProvider gameMapSpecialPointsProvider,ISfxPlayer sfxPlayer,IFxPlayer fxPlayer)
         {
             _npcBehavioursProvider = npcBehavioursProvider;
             _registrar = registrar;
             _globalNpcContextProvider = globalNpcContextProvider;
-            _coroutineRunner = coroutineRunner;
+            _coroutineRunnerService = coroutineRunnerService;
             _randomNavMeshPointService = randomNavMeshPointService;
             _configProvider = configProvider;
             _gameMapSpecialPointsProvider = gameMapSpecialPointsProvider;
@@ -55,7 +55,7 @@ namespace _Root._Scripts.Infrastructure.Services.Factories.Npcs
         private void InitRoot(PeacefulNpcRoot root)
         {
             root. Init(_configProvider, _npcBehavioursProvider, _registrar, _globalNpcContextProvider,
-                _randomNavMeshPointService, _coroutineRunner, _gameMapSpecialPointsProvider,_sfxPlayer,_fxPlayer);
+                _randomNavMeshPointService, _coroutineRunnerService, _gameMapSpecialPointsProvider,_sfxPlayer,_fxPlayer);
         }
 
 

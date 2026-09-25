@@ -7,7 +7,7 @@ namespace _Root._Scripts.Infrastructure.Services.Saves
 {
     public class SaveLoadService : ISaveLoadService, IDisposable
     {
-        private readonly ICoroutineRunner _coroutineRunner;
+        private readonly ICoroutineRunnerService _coroutineRunnerService;
         private Coroutine _autoSaveCoroutine;
         private bool _isDirty;
 
@@ -15,9 +15,9 @@ namespace _Root._Scripts.Infrastructure.Services.Saves
 
         public SavesYG Data => YG2.saves;
 
-        public SaveLoadService(ICoroutineRunner coroutineRunner = null)
+        public SaveLoadService(ICoroutineRunnerService coroutineRunnerService = null)
         {
-            _coroutineRunner = coroutineRunner;
+            _coroutineRunnerService = coroutineRunnerService;
 
             // Если нужно что-то сделать при первом запуске — делай это через Data
             // Например, задать дефолты, если какая-то часть данных пустая
@@ -25,7 +25,7 @@ namespace _Root._Scripts.Infrastructure.Services.Saves
             MarkDirty();
           //  Save();
 
-            if (_coroutineRunner != null)
+            if (_coroutineRunnerService != null)
                 StartAutoSave();
         }
 
@@ -122,10 +122,10 @@ namespace _Root._Scripts.Infrastructure.Services.Saves
 
         private void StartAutoSave()
         {
-            if (_coroutineRunner == null)
+            if (_coroutineRunnerService == null)
                 return;
 
-            _autoSaveCoroutine = _coroutineRunner.StartCoroutine(AutoSaveRoutine());
+            _autoSaveCoroutine = _coroutineRunnerService.StartCoroutine(AutoSaveRoutine());
         }
 
         private IEnumerator AutoSaveRoutine()
@@ -146,9 +146,9 @@ namespace _Root._Scripts.Infrastructure.Services.Saves
 
         public void Dispose()
         {
-            if (_autoSaveCoroutine != null && _coroutineRunner != null)
+            if (_autoSaveCoroutine != null && _coroutineRunnerService != null)
             {
-                _coroutineRunner.StopCoroutine(_autoSaveCoroutine);
+                _coroutineRunnerService.StopCoroutine(_autoSaveCoroutine);
                 _autoSaveCoroutine = null;
             }
 

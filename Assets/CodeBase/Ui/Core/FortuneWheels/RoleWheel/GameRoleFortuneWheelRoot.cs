@@ -26,7 +26,7 @@ namespace _Root._Scripts.Ui.Core.FortuneWheels.RoleWheel
         private IGameRoleFortuneWheel _fortuneWheel;
         private IConfigProvider _configProvider;
         private ICharacterRoleAdjuster _characterRoleAdjuster;
-        private ICoroutineRunner _coroutineRunner;
+        private ICoroutineRunnerService _coroutineRunnerService;
         private ISfxPlayer _sfxPlayer;
         private IFxPlayer _fxPlayer;
 
@@ -34,13 +34,13 @@ namespace _Root._Scripts.Ui.Core.FortuneWheels.RoleWheel
         private bool _isSpinning;
 
         public void Init(IConfigProvider configProvider, ICharacterRoleAdjuster characterRoleAdjuster,
-            ICoroutineRunner coroutineRunner, ISfxPlayer sfxPlayer, IFxPlayer fxPlayer,
+            ICoroutineRunnerService coroutineRunnerService, ISfxPlayer sfxPlayer, IFxPlayer fxPlayer,
             IGameRoleFortuneWheel fortuneWheel)
         {
             _configProvider = configProvider;
             _characterRoleAdjuster = characterRoleAdjuster;
             _fortuneWheel = fortuneWheel;
-            _coroutineRunner = coroutineRunner;
+            _coroutineRunnerService = coroutineRunnerService;
             _sfxPlayer = sfxPlayer;
             _fxPlayer = fxPlayer;
 
@@ -65,10 +65,10 @@ namespace _Root._Scripts.Ui.Core.FortuneWheels.RoleWheel
         {
             _view.Init(_fortuneWheel, _configProvider);
             _cameraHandler.Init(_fortuneWheel, _config);
-            _resultPresenter.Init(_coroutineRunner, _configProvider);
+            _resultPresenter.Init(_coroutineRunnerService, _configProvider);
             
             _sfxHandler.Init(_fortuneWheel, _sfxPlayer, _configProvider);
-            _fxHandler.Init(_fortuneWheel, _configProvider, _fxPlayer, _coroutineRunner);
+            _fxHandler.Init(_fortuneWheel, _configProvider, _fxPlayer, _coroutineRunnerService);
         }
 
         private void SubscribeToEvents()

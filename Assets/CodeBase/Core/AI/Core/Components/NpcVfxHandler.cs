@@ -15,19 +15,19 @@ namespace _Root._Scripts.Core.AI.Core.Components
         private readonly IConfigProvider _configProvider;
         private readonly IHealth _health;
         private readonly Transform _npcTransform;
-        private readonly ICoroutineRunner _coroutineRunner;
+        private readonly ICoroutineRunnerService _coroutineRunnerService;
         private VfxConfig _config;
         private Coroutine _onDiedRoutine;
         private Coroutine _onHealthChangedRoutine;
 
         public NpcVfxHandler(IFxPlayer fxPlayer, IConfigProvider configProvider, IHealth health,
-            Transform npcTransform, ICoroutineRunner coroutineRunner)
+            Transform npcTransform, ICoroutineRunnerService coroutineRunnerService)
         {
             _fxPlayer = fxPlayer;
             _configProvider = configProvider;
             _health = health;
             _npcTransform = npcTransform;
-            _coroutineRunner = coroutineRunner;
+            _coroutineRunnerService = coroutineRunnerService;
 
             GetConfig();
             SubscribeToEvents();
@@ -47,9 +47,9 @@ namespace _Root._Scripts.Core.AI.Core.Components
         private void OnDied()
         {
             if (_onDiedRoutine != null)
-                _coroutineRunner.StopCoroutine(_onDiedRoutine);
+                _coroutineRunnerService.StopCoroutine(_onDiedRoutine);
 
-            _onDiedRoutine = _coroutineRunner.StartCoroutine(OnDiedCoroutine());
+            _onDiedRoutine = _coroutineRunnerService.StartCoroutine(OnDiedCoroutine());
         }
 
         private void OnHealthChanged(float damage)
@@ -58,9 +58,9 @@ namespace _Root._Scripts.Core.AI.Core.Components
                 return;
 
             if (_onHealthChangedRoutine != null) 
-                _coroutineRunner.StopCoroutine(_onHealthChangedRoutine);
+                _coroutineRunnerService.StopCoroutine(_onHealthChangedRoutine);
 
-            _onHealthChangedRoutine = _coroutineRunner.StartCoroutine(OnHealthChangedCoroutine());
+            _onHealthChangedRoutine = _coroutineRunnerService.StartCoroutine(OnHealthChangedCoroutine());
         }
 
         private IEnumerator OnDiedCoroutine()
@@ -97,10 +97,10 @@ namespace _Root._Scripts.Core.AI.Core.Components
 
         private void StopAllCoroutines()
         {
-            if (_coroutineRunner != null)
+            if (_coroutineRunnerService != null)
             {
-                _coroutineRunner.StopCoroutine(_onDiedRoutine);
-                _coroutineRunner.StopCoroutine(_onHealthChangedRoutine);
+                _coroutineRunnerService.StopCoroutine(_onDiedRoutine);
+                _coroutineRunnerService.StopCoroutine(_onHealthChangedRoutine);
             }
         }
     }

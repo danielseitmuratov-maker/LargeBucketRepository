@@ -17,17 +17,17 @@ namespace _Root._Scripts.Ui
         [SerializeField] private MainMenuCharacterCameraHandler _menuCharacterCameraHandler;
 
         private IConfigProvider _configProvider;
-        private ICoroutineRunner _coroutineRunner;
+        private ICoroutineRunnerService _coroutineRunnerService;
         private ILoader<GameMapRoot> _gameMapLoader;
 
         private bool _isVisible;
         private ISfxPlayer _sfxPlayer;
 
-        public void Init(IConfigProvider configProvider, ICoroutineRunner coroutineRunner,
+        public void Init(IConfigProvider configProvider, ICoroutineRunnerService coroutineRunnerService,
             ILoader<GameMapRoot> gameMapLoader, ISfxPlayer sfxPlayer)
         {
             _configProvider = configProvider;
-            _coroutineRunner = coroutineRunner;
+            _coroutineRunnerService = coroutineRunnerService;
             _gameMapLoader = gameMapLoader;
             _sfxPlayer = sfxPlayer;
 
@@ -38,7 +38,7 @@ namespace _Root._Scripts.Ui
 
         private void InitializeComponents()
         {
-            _loadingScreenAnimator.Init(_coroutineRunner, _configProvider, _gameMapLoader);
+            _loadingScreenAnimator.Init(_coroutineRunnerService, _configProvider, _gameMapLoader);
             _menuCharacterCameraHandler.Init(_configProvider, _sfxPlayer);
         }
 

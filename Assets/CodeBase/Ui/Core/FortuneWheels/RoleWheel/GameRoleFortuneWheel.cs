@@ -22,18 +22,18 @@ namespace _Root._Scripts.Ui.Core.FortuneWheels.RoleWheel
 
         private readonly IConfigProvider _configProvider;
         private readonly ICharacterRoleAdjuster _characterRoleAdjuster;
-        private readonly ICoroutineRunner _coroutineRunner;
+        private readonly ICoroutineRunnerService _coroutineRunnerService;
 
         private readonly List<GameRoleFortuneWheelSegment> _segments = new List<GameRoleFortuneWheelSegment>();
         private GameRoleFortuneWheelConfig _config;
         private GameRole _currentGameRole;
 
         public GameRoleFortuneWheel(IConfigProvider configProvider, ICharacterRoleAdjuster characterRoleAdjuster,
-            ICoroutineRunner coroutineRunner)
+            ICoroutineRunnerService coroutineRunnerService)
         {
             _configProvider = configProvider;
             _characterRoleAdjuster = characterRoleAdjuster;
-            _coroutineRunner = coroutineRunner;
+            _coroutineRunnerService = coroutineRunnerService;
 
             _config = _configProvider.GetConfig<GameRoleFortuneWheelConfig>(
                 Paths.FortuneWheel.CharacterGameRoleFortuneWheelConfigPath);
@@ -78,7 +78,7 @@ namespace _Root._Scripts.Ui.Core.FortuneWheels.RoleWheel
             Debug.Log($"Выбран выигрышный сегмент: {winSegment.name}");
             OnSpinStarted?.Invoke(winSegment);
 
-            _coroutineRunner.StartCoroutine(SpinCoroutine(duration, winSegment));
+            _coroutineRunnerService.StartCoroutine(SpinCoroutine(duration, winSegment));
         }
 
         private IEnumerator SpinCoroutine(float duration, GameRoleFortuneWheelSegment winSegment)

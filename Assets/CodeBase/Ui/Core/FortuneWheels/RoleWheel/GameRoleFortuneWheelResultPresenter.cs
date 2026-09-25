@@ -13,15 +13,15 @@ namespace _Root._Scripts.Ui.Core.FortuneWheels.RoleWheel
         [SerializeField] private Transform _background; // простая стена
         [SerializeField] private Transform _resultElementsContainer;
 
-        private ICoroutineRunner _coroutineRunner;
+        private ICoroutineRunnerService _coroutineRunnerService;
         private Coroutine _showCoroutine;
         private GameObject _currentSegmentInstance;
         private IConfigProvider _configProvider;
         private GameRoleFortuneWheelConfig _settings;
 
-        public void Init(ICoroutineRunner coroutineRunner,IConfigProvider configProvider)
+        public void Init(ICoroutineRunnerService coroutineRunnerService,IConfigProvider configProvider)
         {
-            _coroutineRunner = coroutineRunner;
+            _coroutineRunnerService = coroutineRunnerService;
             _configProvider = configProvider;
             
             GetConfigs();
@@ -52,7 +52,7 @@ namespace _Root._Scripts.Ui.Core.FortuneWheels.RoleWheel
             }
 
             if (_showCoroutine != null)
-                _coroutineRunner.StopCoroutine(_showCoroutine);
+                _coroutineRunnerService.StopCoroutine(_showCoroutine);
 
             // Клонируем выигрышный сегмент в контейнер результата
             if (_currentSegmentInstance != null)
@@ -76,7 +76,7 @@ namespace _Root._Scripts.Ui.Core.FortuneWheels.RoleWheel
             _resultCamera.enabled = true;
             _resultCamera.gameObject.SetActive(true);
 
-            _showCoroutine = _coroutineRunner.StartCoroutine(ShowResultRoutine());
+            _showCoroutine = _coroutineRunnerService.StartCoroutine(ShowResultRoutine());
         }
 
         private IEnumerator ShowResultRoutine()
@@ -89,7 +89,7 @@ namespace _Root._Scripts.Ui.Core.FortuneWheels.RoleWheel
         {
             if (_showCoroutine != null)
             {
-                _coroutineRunner.StopCoroutine(_showCoroutine);
+                _coroutineRunnerService.StopCoroutine(_showCoroutine);
                 _showCoroutine = null;
             }
 

@@ -15,7 +15,7 @@ namespace _Root._Scripts.Ui.Core.FortuneWheels.RoleWheel
 
         private VfxConfig _config;
         private IFxPlayer _fxPlayer;
-        private ICoroutineRunner _coroutineRunner;
+        private ICoroutineRunnerService _coroutineRunnerService;
 
         private Coroutine _spinStartedRoutine;
         private Coroutine _spinCompletedRoutine;
@@ -23,12 +23,12 @@ namespace _Root._Scripts.Ui.Core.FortuneWheels.RoleWheel
         private float _destroyingParticleDelay;
 
         public void Init(IGameRoleFortuneWheel gameRoleFortuneWheel, IConfigProvider configProvider, IFxPlayer fxPlayer,
-            ICoroutineRunner coroutineRunner)
+            ICoroutineRunnerService coroutineRunnerService)
         {
             _gameRoleFortuneWheel = gameRoleFortuneWheel;
             _configProvider = configProvider;
             _fxPlayer = fxPlayer;
-            _coroutineRunner = coroutineRunner;
+            _coroutineRunnerService = coroutineRunnerService;
 
             SetUpValues();
             SubscribeToEvents();
@@ -72,10 +72,10 @@ namespace _Root._Scripts.Ui.Core.FortuneWheels.RoleWheel
         }
         
         private void OnSpinStarted(GameRoleFortuneWheelSegment obj) =>
-            _spinStartedRoutine = _coroutineRunner.StartCoroutine(PlaySpinStartedRoutine());
+            _spinStartedRoutine = _coroutineRunnerService.StartCoroutine(PlaySpinStartedRoutine());
 
         private void OnSpinCompleted(GameRoleFortuneWheelSegment obj) => 
-            _spinCompletedRoutine = _coroutineRunner.StartCoroutine(PlaySpinCompletedRoutine());
+            _spinCompletedRoutine = _coroutineRunnerService.StartCoroutine(PlaySpinCompletedRoutine());
 
         private void OnDestroy()
         {

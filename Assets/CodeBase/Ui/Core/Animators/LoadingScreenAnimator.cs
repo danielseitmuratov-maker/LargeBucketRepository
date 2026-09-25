@@ -5,6 +5,7 @@ using _Root._Scripts.Core.GameMap;
 using _Root._Scripts.Infrastructure;
 using _Root._Scripts.Infrastructure.Services.ConfigProviding;
 using _Root._Scripts.Infrastructure.Services.Loaders;
+using CodeBase.Infrastructure;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,7 +19,7 @@ namespace _Root._Scripts.Ui.Core.Animators
         [SerializeField] private Image _loadingScreenImage;
         [SerializeField] private Image _loadingRotateImage;
 
-        private ICoroutineRunner _coroutineRunner;
+        private ICoroutineRunnerService _coroutineRunnerService;
         private IConfigProvider _configProvider;
         private ILoader<GameMapRoot> _gameMapLoader;
 
@@ -30,10 +31,10 @@ namespace _Root._Scripts.Ui.Core.Animators
 
         private bool _isShowing;
 
-        public void Init(ICoroutineRunner coroutineRunner, IConfigProvider configProvider,
+        public void Init(ICoroutineRunnerService coroutineRunnerService, IConfigProvider configProvider,
             ILoader<GameMapRoot> gameMapLoader)
         {
-            _coroutineRunner = coroutineRunner;
+            _coroutineRunnerService = coroutineRunnerService;
             _configProvider = configProvider;
             _gameMapLoader = gameMapLoader;
 
@@ -65,7 +66,7 @@ namespace _Root._Scripts.Ui.Core.Animators
 
         private void OnGameMapLoaderStarted()
         {
-            _coroutineRunner.StartCoroutine(PlayLoadingScreen());
+            _coroutineRunnerService.StartCoroutine(PlayLoadingScreen());
         }
 
         private IEnumerator PlayLoadingScreen()

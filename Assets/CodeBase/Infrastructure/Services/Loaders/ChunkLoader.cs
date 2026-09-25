@@ -19,7 +19,7 @@ namespace _Root._Scripts.Infrastructure.Services.Loaders
         
         private readonly IPool<ChunkRoot> _pool;
         private readonly ISpawnPointGenerator _spawnPointGenerator;
-        private readonly ICoroutineRunner _coroutineRunner;
+        private readonly ICoroutineRunnerService _coroutineRunnerService;
         private readonly IWeightedRandomService _weightedRandomService;
         private readonly IConfigProvider _configProvider;
 
@@ -37,13 +37,13 @@ namespace _Root._Scripts.Infrastructure.Services.Loaders
         public ChunkLoader(
             IPool<ChunkRoot> pool,
             ISpawnPointGenerator spawnPointGenerator,
-            ICoroutineRunner coroutineRunner,
+            ICoroutineRunnerService coroutineRunnerService,
             IWeightedRandomService weightedRandomService,
             IConfigProvider configProvider)
         {
             _pool = pool;
             _spawnPointGenerator = spawnPointGenerator;
-            _coroutineRunner = coroutineRunner;
+            _coroutineRunnerService = coroutineRunnerService;
             _weightedRandomService = weightedRandomService;
             _configProvider = configProvider;
 
@@ -87,17 +87,17 @@ namespace _Root._Scripts.Infrastructure.Services.Loaders
         public void StartAutoLoad()
         {
             if (_autoLoadRoutine != null)
-                _coroutineRunner.StopCoroutine(_autoLoadRoutine);
+                _coroutineRunnerService.StopCoroutine(_autoLoadRoutine);
 
-            _autoLoadRoutine = _coroutineRunner.StartCoroutine(AutoLoadLoop());
+            _autoLoadRoutine = _coroutineRunnerService.StartCoroutine(AutoLoadLoop());
         }
 
         public void StartAutoUnload()
         {
             if (_autoUnloadRoutine != null)
-                _coroutineRunner.StopCoroutine(_autoUnloadRoutine);
+                _coroutineRunnerService.StopCoroutine(_autoUnloadRoutine);
 
-            _autoUnloadRoutine = _coroutineRunner.StartCoroutine(AutoUnloadLoop());
+            _autoUnloadRoutine = _coroutineRunnerService.StartCoroutine(AutoUnloadLoop());
         }
 
         private IEnumerator AutoLoadLoop()
@@ -180,13 +180,13 @@ namespace _Root._Scripts.Infrastructure.Services.Loaders
         {
             if (_autoLoadRoutine != null)
             {
-                _coroutineRunner.StopCoroutine(_autoLoadRoutine);
+                _coroutineRunnerService.StopCoroutine(_autoLoadRoutine);
                 _autoLoadRoutine = null;
             }
 
             if (_autoUnloadRoutine != null)
             {
-                _coroutineRunner.StopCoroutine(_autoUnloadRoutine);
+                _coroutineRunnerService.StopCoroutine(_autoUnloadRoutine);
                 _autoUnloadRoutine = null;
             }
 
