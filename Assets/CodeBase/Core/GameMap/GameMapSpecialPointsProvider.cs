@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using _Root._Scripts.Core.GameMap.SpecialZones;
 using _Root._Scripts.Infrastructure.Services.Loaders;
+using CodeBase.Infrastructure.Services.Loaders;
 using UnityEngine;
 using Random = UnityEngine.Random;
 

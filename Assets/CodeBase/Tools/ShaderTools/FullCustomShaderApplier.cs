@@ -41,7 +41,6 @@ namespace _Root._Scripts.Tools.ShaderTools
             ApplyAllProperties();
             _isInitialized = true;
         }
-        
 
         protected virtual void OnEnable()
         {

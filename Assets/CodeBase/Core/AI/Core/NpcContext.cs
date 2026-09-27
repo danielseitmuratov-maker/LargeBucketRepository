@@ -2,6 +2,7 @@
 using _Root._Scripts.Core.AI.Core.Components;
 using _Root._Scripts.Core.AI.Core.Components.Animations;
 using _Root._Scripts.Infrastructure.Services.RandomPoints;
+using CodeBase.Core.AI.Core.Components.Animations;
 using KinematicCharacterController.Examples;
 using UnityEngine;
 using UnityEngine.AI;

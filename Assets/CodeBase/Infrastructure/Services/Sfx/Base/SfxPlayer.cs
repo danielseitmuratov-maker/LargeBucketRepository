@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CodeBase.Infrastructure;
 using UnityEngine;
 using UnityEngine.Audio;
 using Random = UnityEngine.Random;
@@ -12,10 +13,10 @@ namespace _Root._Scripts.Infrastructure.Services.Sfx.Base
         private List<AudioSource> _pool = new List<AudioSource>();
         private List<AudioSource> _available = new List<AudioSource>();
         private AudioMixerGroup _sfxGroup;
-        private readonly ICoroutineRunner _coroutineRunner;
+        private readonly ICoroutineRunnerService _coroutineRunner;
         private GameObject _parentObject;
 
-        public SfxPlayer(AudioMixerGroup sfxGroup,ICoroutineRunner coroutineRunner,  int poolSize = 100)
+        public SfxPlayer(AudioMixerGroup sfxGroup,ICoroutineRunnerService coroutineRunner,  int poolSize = 100)
         {
             _sfxGroup = sfxGroup;
             _coroutineRunner = coroutineRunner;

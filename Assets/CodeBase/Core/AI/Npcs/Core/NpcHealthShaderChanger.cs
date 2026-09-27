@@ -2,8 +2,9 @@ using System.Collections;
 using _Root._Scripts.Configs;
 using _Root._Scripts.Infrastructure;
 using _Root._Scripts.Infrastructure.Services.ConfigProviding;
-using _Root._Scripts.Infrastructure.Services.Interfaces;
 using _Root._Scripts.Tools.ShaderTools;
+using CodeBase.Infrastructure;
+using CodeBase.Infrastructure.Services.Interfaces;
 using UnityEngine;
 
 namespace _Root._Scripts.Core.AI.Npcs.Core
@@ -30,14 +31,13 @@ namespace _Root._Scripts.Core.AI.Npcs.Core
         private ShaderChangerConfig _config;
 
         public void Init(IHealth health, IConfigProvider configProvider, ICoroutineRunnerService coroutineRunnerService)
-        {
+        {    
             _health = health;
             _configProvider = configProvider;
             _coroutineRunnerService = coroutineRunnerService;
 
             GetConfig();
             SetUpValues();
-            InitializeComponents();
             SubscribeToEvents();
         }
 
@@ -57,12 +57,7 @@ namespace _Root._Scripts.Core.AI.Npcs.Core
             _blendSmoothness = _config.NpcOnDamageBlendSmoothness;
             _blendMode = _config.NpcOnDamageBlendMode;
         }
-
-        private void InitializeComponents()
-        {
-            if (_shaderApplier != null)
-                _shaderApplier.Init();
-        }
+        
 
         private void SubscribeToEvents()
         {

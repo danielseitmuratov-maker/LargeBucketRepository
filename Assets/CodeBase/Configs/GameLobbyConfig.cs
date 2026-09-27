@@ -1,4 +1,4 @@
-using _Root._Scripts.Core.Lobby;
+using CodeBase.Core.Lobby;
 using UnityEngine;
 
 namespace _Root._Scripts.Configs

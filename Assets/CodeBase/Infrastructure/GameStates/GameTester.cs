@@ -1,5 +1,6 @@
 using _Root._Scripts.Core.GameMap;
 using _Root._Scripts.Infrastructure.Services.Loaders;
+using CodeBase.Infrastructure.Services.Loaders;
 using UnityEngine;
 
 namespace _Root._Scripts.Infrastructure.GameStates

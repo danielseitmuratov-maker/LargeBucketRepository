@@ -1,10 +1,12 @@
 using System;
 using _Root._Scripts.Core.AI.Core.Components.Animations;
+using CodeBase.Core.AI.Core.Components.Animations;
 using UnityEngine;
+using Zenject;
 
-namespace _Root._Scripts.Core.AI.Core.Components
+namespace CodeBase.Core.AI.Core.Components
 {
-    public sealed class NpcAnimationPlayer : MonoBehaviour, INpcAnimator
+    public sealed class NpcAnimationPlayer : MonoBehaviour, INpcAnimator ,IInitializable 
     {
         public event Action AttackAnimationFinished;
         public event Action GetDamageAnimationFinished;
@@ -26,15 +28,14 @@ namespace _Root._Scripts.Core.AI.Core.Components
         private static readonly int IsDied = Animator.StringToHash("IsDied");
         private static readonly int IsHeal = Animator.StringToHash("IsHeal");
         private static readonly int IsJump = Animator.StringToHash("IsJump");
-
-
+        
         [SerializeField] private Animator _animator;
 
         private bool _isInitialized;
         private bool _isDead;
         private NpcAnimationState _currentState = NpcAnimationState.Idle;
 
-        public void Init()
+        public void Initialize()
         {
             if (_isInitialized)
                 return;
@@ -157,12 +158,7 @@ namespace _Root._Scripts.Core.AI.Core.Components
             DeathAnimationFinished?.Invoke();
         }
 
-        public void Dispose()
-        {
-            _isInitialized = false;
-            _isDead = false;
-            _currentState = NpcAnimationState.Idle;
-        }
+       
 
         private void ResetTrigger(int triggerHash) => 
             _animator.ResetTrigger(triggerHash);
@@ -173,10 +169,12 @@ namespace _Root._Scripts.Core.AI.Core.Components
             _animator.SetInteger(AnimationState, (int) NpcAnimationState.Idle);
             _animator.SetFloat(SpeedMagnitude, 0f);
         }
-
-        private void OnDestroy()
+        
+        public void Dispose()
         {
-            Dispose();
+            _isInitialized = false;
+            _isDead = false;
+            _currentState = NpcAnimationState.Idle;
         }
     }
 }

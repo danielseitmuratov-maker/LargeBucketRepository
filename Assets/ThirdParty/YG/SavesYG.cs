@@ -17,7 +17,7 @@ namespace YG
         public bool MusicEnabled = true;
 
 
-        public bool IsFirstGameSession = YG2.isFirstGameSession;
+   //     public bool IsFirstGameSession = YG2.isFirstGameSession;
         public bool IsFirstGameLoop = true;
     }
 }

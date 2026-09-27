@@ -1,7 +1,8 @@
 using System;
+using _Root._Scripts.Core.AI.Core.Components.Animations;
 using UnityEngine;
 
-namespace _Root._Scripts.Core.AI.Core.Components.Animations
+namespace CodeBase.Core.AI.Core.Components.Animations
 {
     public interface INpcAnimator : IDisposable
     {
@@ -16,7 +17,6 @@ namespace _Root._Scripts.Core.AI.Core.Components.Animations
         NpcAnimationState CurrentState { get; }
         Animator UnityAnimator { get; }
 
-        void Init();
         void SetState(NpcAnimationState state);
         void PlayMovement(float magnitude);
         void PlayJump();

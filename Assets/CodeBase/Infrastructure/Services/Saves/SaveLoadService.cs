@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using CodeBase.Infrastructure;
+using CodeBase.Infrastructure.Services.Saves;
 using UnityEngine;
 using YG;
 
@@ -13,7 +15,7 @@ namespace _Root._Scripts.Infrastructure.Services.Saves
 
         private const float AutoSaveInterval = 5f;
 
-        public SavesYG Data => YG2.saves;
+     //   public SavesYG Data => YG2.saves;
 
         public SaveLoadService(ICoroutineRunnerService coroutineRunnerService = null)
         {
@@ -35,7 +37,7 @@ namespace _Root._Scripts.Infrastructure.Services.Saves
             {
              //   Data.lastSaveDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
-                YG2.SaveProgress();
+        //        YG2.SaveProgress();
 
                 _isDirty = false;
                 

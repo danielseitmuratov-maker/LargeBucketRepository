@@ -1,15 +1,16 @@
 using System;
 using System.Collections;
 using _Root._Scripts.Configs;
+using _Root._Scripts.Core.Character.CharacterGameRoles.States.Murder;
 using _Root._Scripts.Core.Roles;
-using _Root._Scripts.Infrastructure;
 using _Root._Scripts.Infrastructure.Services.ConfigProviding;
 using _Root._Scripts.Infrastructure.Services.Fx;
 using _Root._Scripts.Infrastructure.Services.Input;
 using _Root._Scripts.Infrastructure.Services.Sfx.Character;
+using CodeBase.Infrastructure;
 using UnityEngine;
 
-namespace _Root._Scripts.Core.Character.CharacterGameRoles.States.Murder
+namespace CodeBase.Core.Character.CharacterGameRoles.States.Murder
 {
     public class MurderRoleDispatcher : IDisposable, IRoleDispatcher
     {
@@ -27,13 +28,11 @@ namespace _Root._Scripts.Core.Character.CharacterGameRoles.States.Murder
         private Coroutine _attackRoutine;
         private bool _isAttacking;
 
-        private GameRole _currentGameRole;
 
         public MurderRoleDispatcher(GameRole gameRole, IFxPlayer fxPlayer,
             ICharacterSfxPlayer sfxPlayer, IConfigProvider configProvider, Transform characterTransform,
             ICoroutineRunnerService coroutineRunnerService, ICharacterAttack characterAttack,IInputService inputService)
         {
-            _currentGameRole = gameRole;
             _fxPlayer = fxPlayer;
             _sfxPlayer = sfxPlayer;
             _configProvider = configProvider;

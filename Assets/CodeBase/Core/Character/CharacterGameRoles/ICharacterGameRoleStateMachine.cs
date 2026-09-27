@@ -1,3 +1,5 @@
+using CodeBase.Core.Character.CharacterGameRoles;
+
 namespace _Root._Scripts.Core.Character.CharacterGameRoles
 {
     public interface ICharacterGameRoleStateMachine

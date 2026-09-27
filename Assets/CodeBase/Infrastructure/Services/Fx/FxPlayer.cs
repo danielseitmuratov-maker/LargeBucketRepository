@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using _Root._Scripts.Infrastructure.Services.Fx;
 using UnityEngine;
 
-namespace _Root._Scripts.Infrastructure.Services.Fx
+namespace CodeBase.Infrastructure.Services.Fx
 {
     public class FxPlayer : IFxPlayer
     {

@@ -1,47 +1,25 @@
 using System;
-using System.Collections.Generic;
-using _Root._Scripts.Infrastructure.Services.ConfigProviding;
-using _Root._Scripts.Infrastructure.Services.Sfx.Timer;
-using _Root._Scripts.Infrastructure.Services.Timers;
-using _Root._Scripts.Tools.ShaderTools;
-using _Root._Scripts.Ui.Core.Timers;
+using CodeBase.Ui.Core.Timers;
 using Unity.AI.Navigation;
 using UnityEngine;
+using Zenject;
 
-namespace _Root._Scripts.Core.Lobby
+namespace CodeBase.Core.Lobby
 {
-    public class GameLobbyRoot : MonoBehaviour
+    public class GameLobbyRoot : MonoBehaviour ,IInitializable,IDisposable
     {
         public event Action<GameLobbyRoot> LobbyTimeCompleted;
 
         [field: SerializeField] public NavMeshSurface MeshSurface { get; private set; }
-
-        [SerializeField] private List<FullCustomShaderApplier> _fullCustomShaderAppliers;
-
+        
         [SerializeField] private PreGameCycleTimerRoot _preGameCycleTimerRoot;
 
-        private IPreGameCycleTimer _timer;
-        private IConfigProvider _configProvider;
-        private ITimerSfxPlayer _timerSfxPlayer;
 
-        public void Init(IPreGameCycleTimer timer, IConfigProvider configProvider, ITimerSfxPlayer timerSfxPlayer)
+        public void Initialize()
         {
-            _timer = timer;
-            _configProvider = configProvider;
-            _timerSfxPlayer = timerSfxPlayer;
-
-            InitializeComponents();
             SubscribeToEvents();
         }
 
-        private void InitializeComponents()
-        {
-            if (_fullCustomShaderAppliers.Count > 0)
-                for (int i = 0; i < _fullCustomShaderAppliers.Count; i++)
-                    _fullCustomShaderAppliers[i].Init();
-
-            _preGameCycleTimerRoot.Init(_timer, _configProvider, _timerSfxPlayer);
-        }
 
         private void SubscribeToEvents()
         {
@@ -73,7 +51,7 @@ namespace _Root._Scripts.Core.Lobby
         {
         }
 
-        private void OnDestroy()
+        public void Dispose()
         {
             UnsubscribeFromEvents();
         }

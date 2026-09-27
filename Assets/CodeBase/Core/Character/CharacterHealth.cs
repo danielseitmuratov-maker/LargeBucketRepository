@@ -1,16 +1,16 @@
 using System;
-using _Root._Scripts.Infrastructure.Services.Interfaces;
+using CodeBase.Infrastructure.Services.Interfaces;
 
-namespace _Root._Scripts.Core.Character
+namespace CodeBase.Core.Character
 {
-    public class CharacterHealth : IHealth
+    public class CharacterHealth : ICharacterHealth
     {
         public event Action<float> HealthChanged;
         public event Action Died;
 
-        public void Init(float maxHealth)
+        public CharacterHealth(float maxHealth)
         {
-            
+            MaxHealth = maxHealth;
         }
 
         public float MaxHealth { get; }

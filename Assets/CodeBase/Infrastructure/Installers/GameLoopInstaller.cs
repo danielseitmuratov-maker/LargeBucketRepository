@@ -1,12 +1,12 @@
-using _Root._Scripts.Core.AI.Npcs;
 using _Root._Scripts.Core.AI.Tools;
-using _Root._Scripts.Infrastructure.Services.Factories.Npcs;
 using _Root._Scripts.Infrastructure.Services.Npc.Providers;
 using _Root._Scripts.Infrastructure.Services.Npc.Registrars;
 using _Root._Scripts.Infrastructure.Services.RandomPoints;
+using _Root._Scripts.Infrastructure.Services.Sfx.Timer;
 using _Root._Scripts.Infrastructure.Services.Timers;
 using CodeBase.Infrastructure.Services.Factories;
 using CodeBase.Infrastructure.Services.Factories.Npcs;
+using CodeBase.Ui.Core.Timers;
 using Zenject;
 
 namespace CodeBase.Infrastructure.Installers
@@ -18,6 +18,7 @@ namespace CodeBase.Infrastructure.Installers
             BindGameLogicServices();
             BindNpcServices();
             BindTimers();
+            BindTimerComponents();
             BindFactories();
             BindLoaders();
             BindHandleServices();
@@ -42,12 +43,30 @@ namespace CodeBase.Infrastructure.Installers
             Container.Bind<IGameLoopTimer>().To<GameLoopTimer>().AsSingle();
         }
         
+        private void BindTimerComponents()
+        {
+            Container
+                .BindInterfacesAndSelfTo<PreGameCycleTimerRoot>()
+                .FromComponentOnRoot()
+                .AsSingle()
+                .NonLazy();
+            
+            Container.Bind<ITimerSfxPlayer>().To<TimerSfxPlayer>().AsSingle();
+        }
+        
         private void BindFactories()
         {
             Container.Bind<ICharacterFactory>().To<CharacterFactory>().AsSingle();
-            Container.Bind<ILobbyNpcFactory>().To<LobbyNpcFactory>().AsSingle();
+
+            BindNpcFactories();
         }
-        
+
+        private void BindNpcFactories()
+        {
+            Container.Bind<ILobbyNpcFactory>().To<LobbyNpcFactory>().AsSingle();
+            Container.BindInterfacesAndSelfTo<PeacefulNpcFactory>().AsSingle();
+        }
+
         private void BindLoaders()
         {
         }

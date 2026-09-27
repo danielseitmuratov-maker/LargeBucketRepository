@@ -1,20 +1,19 @@
 using System;
 using System.Collections.Generic;
 using _Root._Scripts.Configs;
-using _Root._Scripts.Core.AI.Npcs;
 using _Root._Scripts.Infrastructure.Services.ConfigProviding;
-using _Root._Scripts.Infrastructure.Services.Factories;
 using _Root._Scripts.Infrastructure.Services.RandomPoints;
-using CodeBase.Infrastructure.Services.Factories;
+using CodeBase.Core.AI.Npcs;
+using CodeBase.Infrastructure.Services.Factories.Npcs;
 using Unity.AI.Navigation;
 using UnityEngine;
 
-namespace _Root._Scripts.Infrastructure.Services.Spawners
+namespace CodeBase.Infrastructure.Services.Spawners
 {
-    public class LobbyNpcSpawner : INpcSpawner<LobbyNpcRoot>, IDisposable
+    public class LobbyNpcSpawner : ILobbyNpcSpawner, IDisposable
     {
         private NavMeshSurface _meshSurface;
-        private readonly IFactory<LobbyNpcRoot> _factory;
+        private readonly ILobbyNpcFactory _factory;
         private readonly IRandomNavMeshPointService _randomPointService;
         private readonly IConfigProvider _configProvider;
         private readonly NpcSpawnerConfig _config;
@@ -24,8 +23,8 @@ namespace _Root._Scripts.Infrastructure.Services.Spawners
         public event Action<LobbyNpcRoot> ObjectSpawned;
         public event Action<LobbyNpcRoot> ObjectDeSpawned;
 
-        public LobbyNpcSpawner(IFactory<LobbyNpcRoot> factory, IRandomNavMeshPointService randomPointService,
-            IConfigProvider configProvider)
+        public LobbyNpcSpawner(IRandomNavMeshPointService randomPointService,
+            IConfigProvider configProvider, ILobbyNpcFactory factory)
         {
             _factory = factory;
             _randomPointService = randomPointService;

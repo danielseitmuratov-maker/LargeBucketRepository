@@ -1,5 +1,6 @@
 using _Root._Scripts.Core.AI.Core;
 using _Root._Scripts.Core.AI.Core.Components.Animations;
+using CodeBase.Core.AI.Core.Components.Animations;
 using KinematicCharacterController.Examples;
 using UnityEngine;
 

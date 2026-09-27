@@ -1,8 +1,8 @@
 using System;
 using _Root._Scripts.Configs;
 using _Root._Scripts.Infrastructure.Services.ConfigProviding;
-using _Root._Scripts.Infrastructure.Services.Interfaces;
 using _Root._Scripts.Infrastructure.Services.Sfx.Base;
+using CodeBase.Infrastructure.Services.Interfaces;
 using UnityEngine;
 
 namespace _Root._Scripts.Core.AI.Core.Components

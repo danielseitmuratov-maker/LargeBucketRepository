@@ -1,8 +1,8 @@
-    using System;
-    using System.Collections.Generic;
-    using Unity.AI.Navigation;
+using System;
+using System.Collections.Generic;
+using Unity.AI.Navigation;
 
-    namespace _Root._Scripts.Infrastructure.Services.Spawners
+namespace CodeBase.Infrastructure.Services.Spawners
     {
         public interface INpcSpawner<T>
         {

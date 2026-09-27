@@ -4,6 +4,7 @@ using _Root._Scripts.Ui;
 using _Root._Scripts.Ui.Core.FortuneWheels.RoleWheel;
 using CodeBase.Infrastructure;
 using CodeBase.Infrastructure.GameStates;
+using CodeBase.Infrastructure.Services.Input;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -41,9 +42,8 @@ namespace _Root._Scripts.Infrastructure
 
         public void Init()
         {
-            _stateMachine = new StateMachine(this, _jumpButton, _attackButton,
-                _autoAttackButton, _autoRunButton, _audioMixer, _audioMixerGroup, _mainHudHandler,
-                _startGameButtonHandler,_gameRoleFortuneWheelRoot,_gameTester);
+            _stateMachine = new StateMachine(_mainHudHandler,
+                _startGameButtonHandler,_gameRoleFortuneWheelRoot);
 
             _stateMachine.Enter<BootstrapState>();
         }

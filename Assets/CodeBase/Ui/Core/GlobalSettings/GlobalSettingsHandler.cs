@@ -1,8 +1,8 @@
 using _Root._Scripts.Configs;
 using _Root._Scripts.Infrastructure.Services.ConfigProviding;
 using _Root._Scripts.Infrastructure.Services.GlobalSettings;
-using _Root._Scripts.Infrastructure.Services.Saves;
 using _Root._Scripts.Infrastructure.Services.Sfx.Base;
+using CodeBase.Infrastructure.Services.Saves;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -10,7 +10,7 @@ using UnityEngine.UI;
 using YG;
 using Random = UnityEngine.Random;
 
-namespace _Root._Scripts.Ui.Core.GlobalSettings
+namespace CodeBase.Ui.Core.GlobalSettings
 {
     public class GlobalSettingsHandler : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
     {
@@ -41,7 +41,7 @@ namespace _Root._Scripts.Ui.Core.GlobalSettings
             _globalSettingsService = globalSettingsService;
             _sfxPlayer = sfxPlayer;
             _saveLoadService = saveLoadService;
-            _data = _saveLoadService.Data;
+           // _data = _saveLoadService.Data;
 
             _soundsConfig = configProvider.GetConfig<SoundsConfig>(Paths.GlobalValues.SoundsConfigPath);
 
@@ -78,7 +78,7 @@ namespace _Root._Scripts.Ui.Core.GlobalSettings
                 _masterVolumeSlider.onValueChanged.RemoveListener(OnMasterVolumeChanged);
                 _masterVolumeSlider.minValue = 0f;
                 _masterVolumeSlider.maxValue = 1f;
-                _masterVolumeSlider.value = _globalSettingsService.MasterVolume;
+               // _masterVolumeSlider.value = _globalSettingsService.MasterVolume;
                 _masterVolumeSlider.onValueChanged.AddListener(OnMasterVolumeChanged);
             }
 
@@ -89,8 +89,8 @@ namespace _Root._Scripts.Ui.Core.GlobalSettings
                 _cameraSensitivitySlider.minValue = 0f;
                 _cameraSensitivitySlider.maxValue = 1f;
 
-                float normalizedValue = Mathf.InverseLerp(0.01f, 1f, _globalSettingsService.CameraSensitivity);
-                _cameraSensitivitySlider.value = normalizedValue;
+         //       float normalizedValue = Mathf.InverseLerp(0.01f, 1f, _globalSettingsService.CameraSensitivity);
+           //     _cameraSensitivitySlider.value = normalizedValue;
 
                 _cameraSensitivitySlider.onValueChanged.AddListener(OnCameraSensitivityChanged);
             }

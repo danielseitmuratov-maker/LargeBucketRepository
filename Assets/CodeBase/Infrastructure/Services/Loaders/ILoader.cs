@@ -1,6 +1,6 @@
 using System;
 
-namespace _Root._Scripts.Infrastructure.Services.Loaders
+namespace CodeBase.Infrastructure.Services.Loaders
 {
     public interface ILoader<T> where T : new()
     {

@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
+using _Root._Scripts.Core.Character.CharacterGameRoles;
 
-namespace _Root._Scripts.Core.Character.CharacterGameRoles
+namespace CodeBase.Core.Character.CharacterGameRoles
 {
     public class CharacterGameRoleStateMachine : ICharacterGameRoleStateMachine
     {
@@ -12,8 +13,7 @@ namespace _Root._Scripts.Core.Character.CharacterGameRoles
         {
             _states = new Dictionary<Type, ICharacterGameRoleState>()
             {
-             //  [typeof(CharacterMurderGameRoleState)] = new CharacterMurderGameRoleState(),
-               
+                
             };
         }
 

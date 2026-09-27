@@ -1,4 +1,3 @@
-using _Root._Scripts.Core.AI.Tools;
 using _Root._Scripts.Core.Character;
 using _Root._Scripts.Infrastructure.Services.ConfigProviding;
 using _Root._Scripts.Infrastructure.Services.Cursor;
@@ -8,8 +7,15 @@ using _Root._Scripts.Infrastructure.Services.Input;
 using _Root._Scripts.Infrastructure.Services.Saves;
 using _Root._Scripts.Infrastructure.Services.Sfx.Base;
 using _Root._Scripts.Infrastructure.Services.WeightedRandom;
+using _Root._Scripts.Tools.ShaderTools;
 using _Root._Scripts.Ui.Core.FortuneWheels.RoleWheel;
+using CodeBase.Infrastructure.Services.Fx;
+using CodeBase.Infrastructure.Services.GlobalSettings;
 using CodeBase.Infrastructure.Services.Input;
+using CodeBase.Infrastructure.Services.Loaders;
+using CodeBase.Infrastructure.Services.Saves;
+using KinematicCharacterController;
+using KinematicCharacterController.Examples;
 using UnityEngine;
 using UnityEngine.Audio;
 using Zenject;
@@ -26,11 +32,34 @@ namespace CodeBase.Infrastructure.Installers
             BindInfrastructureServices();
             BindInputService();
             BindMonoComponents();
+            BindKCCComponents();
+            BindLoaders();
+            BindShaderAppliers();
+        }
+
+        private void BindShaderAppliers()
+        {
+            Container.BindInterfacesAndSelfTo<FullCustomShaderApplier>().AsTransient();
+            Container.BindInterfacesAndSelfTo<InteractiveObjectShaderApplier>().AsTransient();
+        }
+
+
+        private void BindKCCComponents()
+        {
+            Container.BindInterfacesAndSelfTo<KinematicCharacterMotor>().AsCached();
+            Container.BindInterfacesAndSelfTo<ExampleCharacterController>().AsCached();
+            Container.BindInterfacesAndSelfTo<ExampleCharacterCamera>().AsCached();
         }
 
         private void BindMonoComponents()
         {
             Container.BindInstance(_audioMixerGroup).AsSingle();
+        }
+        
+        private void BindLoaders()
+        {
+            Container.Bind<IGameLobbyLoader>().To<GameLobbyLoader>().AsSingle();
+            Container.Bind<IGameMapLoader>().To<GameMapLoader>().AsSingle();
         }
 
         private void BindInfrastructureServices()
@@ -46,7 +75,6 @@ namespace CodeBase.Infrastructure.Installers
             Container.Bind<ICursorLocker>().To<CursorLocker>();
             Container.Bind<IGlobalSettingsService>().To<GlobalSettingsService>().AsSingle();
             Container.Bind<IGameRoleFortuneWheel>().To<GameRoleFortuneWheel>().AsSingle();
-            
         }
 
         private void BindCoroutineRunnerService()

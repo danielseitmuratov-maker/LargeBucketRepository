@@ -1,8 +1,9 @@
-using _Root._Scripts.Core.Character.CharacterGameRoles.States.Murder;
+using _Root._Scripts.Core.Character.CharacterGameRoles;
 using _Root._Scripts.Infrastructure.Services.Fx;
 using _Root._Scripts.Infrastructure.Services.Input;
+using CodeBase.Core.Character.CharacterGameRoles.States.Murder;
 
-namespace _Root._Scripts.Core.Character.CharacterGameRoles.States
+namespace CodeBase.Core.Character.CharacterGameRoles.States
 {
     public class CharacterMurderGameRoleState : ICharacterGameRoleState
     {

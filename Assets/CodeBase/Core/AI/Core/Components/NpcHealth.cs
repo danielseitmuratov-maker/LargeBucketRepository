@@ -1,8 +1,8 @@
 using System;
-using _Root._Scripts.Infrastructure.Services.Interfaces;
+using CodeBase.Infrastructure.Services.Interfaces;
 using UnityEngine;
 
-namespace _Root._Scripts.Core.AI.Core.Components
+namespace CodeBase.Core.AI.Core.Components
 {
     public class NpcHealth : MonoBehaviour, IHealth
     {

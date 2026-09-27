@@ -2,25 +2,28 @@ using System;
 using _Root._Scripts.Configs;
 using _Root._Scripts.Core.GameMap;
 using _Root._Scripts.Infrastructure.Services.ConfigProviding;
+using Zenject;
 using Object = UnityEngine.Object;
 
-namespace _Root._Scripts.Infrastructure.Services.Loaders
+namespace CodeBase.Infrastructure.Services.Loaders
 {
-    public class GameMapLoader : ILoader<GameMapRoot>
+    public class GameMapLoader : IGameMapLoader
     {
         public event Action Started;
         public event Action<GameMapRoot, int> Loaded;
         public event Action<GameMapRoot> UnLoaded;
         
         private readonly IConfigProvider _configProvider;
-        
+        private readonly IInstantiator _instantiator;
+
         private GameMapConfig _config;
         private GameMapRoot _prefab;
         private GameLogicConfig _gameLogicConfig;
 
-        public GameMapLoader(IConfigProvider configProvider)
+        public GameMapLoader(IConfigProvider configProvider,IInstantiator instantiator)
         {
             _configProvider = configProvider;
+            _instantiator = instantiator;
 
             SetUpValues();
         }
@@ -30,8 +33,9 @@ namespace _Root._Scripts.Infrastructure.Services.Loaders
             Started?.Invoke();
             
             var spawnPointPosition = _gameLogicConfig.GameMapSpawnPointPosition;
-            var gameMap = Object.Instantiate(_prefab, spawnPointPosition, _prefab.transform.rotation);
-            gameMap.Init();
+
+            var gameMap = _instantiator.InstantiatePrefabForComponent<GameMapRoot>(_prefab, spawnPointPosition,
+                _prefab.transform.rotation, null);
             
             Loaded?.Invoke(gameMap,id);
             return gameMap;

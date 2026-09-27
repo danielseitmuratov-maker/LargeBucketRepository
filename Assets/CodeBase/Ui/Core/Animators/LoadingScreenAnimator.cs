@@ -6,6 +6,7 @@ using _Root._Scripts.Infrastructure;
 using _Root._Scripts.Infrastructure.Services.ConfigProviding;
 using _Root._Scripts.Infrastructure.Services.Loaders;
 using CodeBase.Infrastructure;
+using CodeBase.Infrastructure.Services.Loaders;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;

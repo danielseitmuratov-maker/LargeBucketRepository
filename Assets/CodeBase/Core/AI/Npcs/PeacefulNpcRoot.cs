@@ -3,19 +3,22 @@ using _Root._Scripts.Core.AI.Core.Components;
 using _Root._Scripts.Core.AI.Npcs.Brains;
 using _Root._Scripts.Core.AI.Npcs.Core;
 using _Root._Scripts.Core.GameMap;
-using _Root._Scripts.Infrastructure;
 using _Root._Scripts.Infrastructure.Services.ConfigProviding;
 using _Root._Scripts.Infrastructure.Services.Fx;
 using _Root._Scripts.Infrastructure.Services.Npc.Providers;
 using _Root._Scripts.Infrastructure.Services.Npc.Registrars;
 using _Root._Scripts.Infrastructure.Services.RandomPoints;
 using _Root._Scripts.Infrastructure.Services.Sfx.Base;
+using CodeBase.Core.AI.Core.Components;
+using CodeBase.Infrastructure;
 using KinematicCharacterController;
 using KinematicCharacterController.Examples;
+using Unity.Services.Core;
 using UnityEngine;
 using UnityEngine.AI;
+using Zenject;
 
-namespace _Root._Scripts.Core.AI.Npcs
+namespace CodeBase.Core.AI.Npcs
 {
     public class PeacefulNpcRoot : NpcRoot
     {
@@ -31,7 +34,8 @@ namespace _Root._Scripts.Core.AI.Npcs
         [SerializeField] private NpcAnimationPlayer _animationPlayer;
         [SerializeField] private KinematicCharacterMotor _motor;
 
-        [Header("Health")] [SerializeField] private NpcHealth _health;
+        [Header("Health")]
+        [SerializeField] private NpcHealth _health;
         [SerializeField] private NpcHealthShaderChanger _healthShaderChanger;
 
         [SerializeField] private NpcRoleConfigSo _roleConfig;
@@ -47,6 +51,14 @@ namespace _Root._Scripts.Core.AI.Npcs
         private NpcSfxHandler _npcSfxHandler;
         private NpcVfxHandler _npcVfxHandler;
         private NpcVisualHandler _npcVisualHandler;
+
+
+        [Inject]
+        public void Construct(IService service)
+        {
+            
+        }
+
 
         public void Init(IConfigProvider configProvider, INpcBehavioursProvider npcBehavioursProvider,
             INpcStateMachineRegistrar stateMachineRegistrar, IGlobalNpcContextProvider globalNpcContextProvider,
@@ -98,9 +110,6 @@ namespace _Root._Scripts.Core.AI.Npcs
         {
             _health.Init(_roleConfig.MaxHealth);
 
-            _motor.Init();
-            _controller.Init();
-            _animationPlayer.Init();
             _healthShaderChanger.Init(_health, ConfigProvider, _coroutineRunnerService);
 
             _npcBrain = new PeacefulNpcBrain(ConfigProvider, NpcBehavioursProvider, Registrar, GlobalNpcContextProvider,

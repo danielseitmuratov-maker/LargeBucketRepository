@@ -1,3 +1,5 @@
+using CodeBase.Infrastructure.Services.Loaders;
+
 namespace _Root._Scripts.Infrastructure.Services.Loaders
 {
     public interface IAutoLoader<T> : ILoader<T> where T : new()

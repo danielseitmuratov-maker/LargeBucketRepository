@@ -1,5 +1,5 @@
 
-namespace _Root._Scripts.Core.Character.CharacterGameRoles.States.Murder
+namespace CodeBase.Core.Character.CharacterGameRoles.States.Murder
 {
     public interface IRoleDispatcher
     {

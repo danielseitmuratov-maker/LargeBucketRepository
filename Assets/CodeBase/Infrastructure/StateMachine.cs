@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using _Root._Scripts.Core.AI.Npcs;
 using _Root._Scripts.Core.Character;
 using _Root._Scripts.Core.GameMap;
-using _Root._Scripts.Core.Lobby;
 using _Root._Scripts.Infrastructure;
 using _Root._Scripts.Infrastructure.GameStates;
 using _Root._Scripts.Infrastructure.Services.ConfigProviding;
-using _Root._Scripts.Infrastructure.Services.Factories;
 using _Root._Scripts.Infrastructure.Services.Input;
 using _Root._Scripts.Infrastructure.Services.Loaders;
 using _Root._Scripts.Infrastructure.Services.Npc.Providers;
@@ -17,71 +15,47 @@ using _Root._Scripts.Infrastructure.Services.Spawners;
 using _Root._Scripts.Infrastructure.Services.Timers;
 using _Root._Scripts.Ui;
 using _Root._Scripts.Ui.Core.FortuneWheels.RoleWheel;
+using CodeBase.Core.AI.Npcs;
 using CodeBase.Core.Character;
 using CodeBase.Infrastructure.GameStates;
 using CodeBase.Infrastructure.Services.Factories;
+using CodeBase.Infrastructure.Services.Input;
 using UnityEngine.Audio;
 
 namespace CodeBase.Infrastructure
 {
     public class StateMachine : IStateMachine
     {
-        private readonly ICoroutineRunnerService _coroutineRunnerService;
         private Dictionary<Type, IState> _states;
         private IExitableState _currentState;
-        private Volume _globalVolume;
+      //  private Volume _globalVolume;
 
-        private AudioMixer _audioMixer;
 
         private AudioMixerGroup _sfxAudioMixerGroup;
 
-        private AudioMixerGroup _audioMixerGroup;
         private MainHudHandler _mainHudHandler;
 
         private GameRoleFortuneWheelRoot _gameRoleFortuneWheelRoot;
         private StartGameButtonHandler _startGameButtonHandler;
-        private GameTester _gameTester;
 
-        public StateMachine(ICoroutineRunnerService coroutineRunnerService, IJumpButton jumpButton,
-            IAttackButton attackButton, IAutoAttackButton autoAttackButton, IAutoRunButton autoRunButton,
-            AudioMixer audioMixer,
-            AudioMixerGroup audioMixerGroup, MainHudHandler mainHudHandler,
-            StartGameButtonHandler startGameButtonHandler, GameRoleFortuneWheelRoot gameRoleFortuneWheelRoot,GameTester gameTester)
+        public StateMachine(MainHudHandler mainHudHandler,
+            StartGameButtonHandler startGameButtonHandler, GameRoleFortuneWheelRoot gameRoleFortuneWheelRoot)
         {
-            _coroutineRunnerService = coroutineRunnerService;
-            _audioMixer = audioMixer;
-            _audioMixerGroup = audioMixerGroup;
             _mainHudHandler = mainHudHandler;
             _startGameButtonHandler = startGameButtonHandler;
             _gameRoleFortuneWheelRoot = gameRoleFortuneWheelRoot;
-            _gameTester = gameTester;
 
 
             _states = new Dictionary<Type, IState>()
             {
                 [typeof(BootstrapState)] =
-                    new BootstrapState(this, _coroutineRunnerService, jumpButton, attackButton, autoRunButton,
-                        autoAttackButton, _audioMixer, _audioMixerGroup, _mainHudHandler, _gameRoleFortuneWheelRoot,_gameTester),
+                    new BootstrapState(this),
 
                 [typeof(MainMenuState)] = new MainMenuState(this, _startGameButtonHandler,
                     _mainHudHandler),
 
                 [typeof(TutorialState)] = new TutorialState(this),
-
-                [typeof(GameLoopState)] =
-                    new GameLoopState(this,
-                        G.Get<ISaveLoadService>(),
-                        G.Get<IConfigProvider>(),
-                        G.Get<IFactory<CharacterRoot>>(),
-                        G.Get<ILoader<GameLobbyRoot>>(),
-                        G.Get<ILoader<GameMapRoot>>(),
-                        G.Get<IRandomNavMeshPointService>(),
-                        _gameRoleFortuneWheelRoot,
-                        G.Get<INpcSpawner<LobbyNpcRoot>>(),
-                        G.Get<INpcSpawnerWithRoles>(),
-                        G.Get<IGameLoopTimer>(),
-                        G.Get<IGlobalNpcContextProvider>()),
-
+                
                 [typeof(DevelopmentState)] =
                     new DevelopmentState(this)
             };

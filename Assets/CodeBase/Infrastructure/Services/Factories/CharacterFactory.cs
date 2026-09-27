@@ -28,8 +28,7 @@ namespace CodeBase.Infrastructure.Services.Factories
         public CharacterRoot Create(Vector3 at,Transform parent)
         {
             var prefab = _configProvider.GetConfig<CharacterConfig>(Paths.GlobalValues.CharacterConfigPath).Prefab;
-            var gameObject =  _instantiator.InstantiatePrefab(prefab,at,prefab.transform.rotation,parent);
-            return gameObject.GetComponent<CharacterRoot>();
+            return _instantiator.InstantiatePrefabForComponent<CharacterRoot>(prefab,at,prefab.transform.rotation,parent);
         }
     }
 }

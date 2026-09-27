@@ -5,6 +5,7 @@ using _Root._Scripts.Infrastructure.Services.ConfigProviding;
 using _Root._Scripts.Infrastructure.Services.Timers;
 using TMPro;
 using UnityEngine;
+using Zenject;
 
 namespace _Root._Scripts.Ui.Core.Timers
 {
@@ -30,7 +31,8 @@ namespace _Root._Scripts.Ui.Core.Timers
         private Coroutine _scaleCoroutine;
         private Coroutine _colorCoroutine;
 
-        public void Init(IPreGameCycleTimer timer, IConfigProvider configProvider)
+        [Inject]
+        public void Construct(IPreGameCycleTimer timer, IConfigProvider configProvider)
         {
             _timer = timer;
             _configProvider = configProvider;
@@ -42,7 +44,7 @@ namespace _Root._Scripts.Ui.Core.Timers
             if (_timer != null)
                 OnTimeUpdated(_timer.GetCurrentTime());
         }
-        
+
 
         private void SetUpValues()
         {

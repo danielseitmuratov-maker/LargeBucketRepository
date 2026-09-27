@@ -4,7 +4,7 @@ using _Root._Scripts.Infrastructure.Services.Sfx.Base;
 using _Root._Scripts.Ui.Core;
 using UnityEngine.EventSystems;
 
-namespace _Root._Scripts.Infrastructure.Services.Input
+namespace CodeBase.Infrastructure.Services.Input
 {
     public class StartGameButtonHandler : UiButton ,IPointerClickHandler
     {

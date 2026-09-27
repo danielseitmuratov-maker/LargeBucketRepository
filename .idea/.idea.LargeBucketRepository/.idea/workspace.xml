@@ -20,41 +20,234 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b5140d2-2104-4f23-96fd-58383a48f0e6" name="Default Changelist" comment="short fix : gameinput class returned">
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/GameEntities.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/GameEntities/CharacterInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/GameEntities/CharacterInstaller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/ICharacterFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/ICharacterFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/ILobbyNpcFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/ILobbyNpcFactory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/ICharacterMovement.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/ICharacterMovement.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/GameEntities/Npc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/GameEntities/Npc/PeacefullNpcInstaller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/GameEntities/Npc/PeacefullNpcInstaller.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/INpcFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/INpcFactory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/IPeacefulNpcFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/IPeacefulNpcFactory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Interfaces/ICharacterHealth.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Interfaces/ICharacterHealth.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/IGameLobbyLoader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/IGameLobbyLoader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/IGameMapLoader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/IGameMapLoader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Spawners/ILobbyNpcSpawner.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Spawners/ILobbyNpcSpawner.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LargeBucketRepository/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LargeBucketRepository/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LargeBucketRepository/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LargeBucketRepository/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LargeBucketRepository/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LargeBucketRepository/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Configs/CharacterConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Configs/CharacterConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsBase/Materials/Main/MainMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsBase/Materials/Main/MainMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsBase/Prefabs/Character/____Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsBase/Prefabs/Character/____Character.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Configs/GameLobbyConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Configs/GameLobbyConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Behaviours/HealBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Behaviours/HealBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Behaviours/RunOnNavMeshBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Behaviours/RunOnNavMeshBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Behaviours/RunToHidingZoneBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Behaviours/RunToHidingZoneBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Behaviours/TimedCycleBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Behaviours/TimedCycleBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Behaviours/TransformationBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Behaviours/TransformationBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/Components/Animations/INpcAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/Components/Animations/INpcAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/Components/NpcAnimationPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/Components/NpcAnimationPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/Components/NpcHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/Components/NpcHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/Components/NpcSfxHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/Components/NpcSfxHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/Components/NpcVfxHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/Components/NpcVfxHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/Components/NpcVisualHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/Components/NpcVisualHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/NpcContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/NpcContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/NpcRoleConfigSo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/NpcRoleConfigSo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Npcs/Core/NpcHealthShaderChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Npcs/Core/NpcHealthShaderChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Npcs/INpcRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Npcs/INpcRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Npcs/LobbyNpcRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Npcs/LobbyNpcRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Npcs/NpcRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Npcs/NpcRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Npcs/PeacefulNpcRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Npcs/PeacefulNpcRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Cameras/MainMenuCharacterCameraHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Cameras/MainMenuCharacterCameraHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterGameRoles/CharacterGameRoleStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterGameRoles/CharacterGameRoleStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterGameRoles/ICharacterGameRoleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterGameRoles/ICharacterGameRoleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterGameRoles/ICharacterGameRoleStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterGameRoles/ICharacterGameRoleStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterGameRoles/States/CharacterMurderGameRoleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterGameRoles/States/CharacterMurderGameRoleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterGameRoles/States/Murder/CharacterAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterGameRoles/States/Murder/CharacterAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterGameRoles/States/Murder/IRoleDispatcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterGameRoles/States/Murder/IRoleDispatcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterGameRoles/States/Murder/MurderRoleDispatcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterGameRoles/States/Murder/MurderRoleDispatcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterHealth.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterRoleAdjuster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterRoleAdjuster.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Chunks/ActiveNextChunkHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Chunks/ActiveNextChunkHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Chunks/FarmZones/FarmEntranceHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Chunks/FarmZones/FarmEntranceHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/Handlers/CharacterEffectsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/Handlers/CharacterEffectsHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/Handlers/CharacterSoundHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/Handlers/CharacterSoundHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/IEnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/IEnemyMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/IMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Character/IMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/GameMap/GameMapRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/GameMap/GameMapRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/GameMap/GameMapSpecialPointsProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/GameMap/GameMapSpecialPointsProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Lobby/GameLobbyRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Lobby/GameLobbyRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Bootstrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Bootstrap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/G.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/G.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameStates/BootstrapState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameStates/BootstrapState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameStates/GameLoopState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameStates/GameLoopState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameStates/GameTester.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameStates/GameTester.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameStates/MainMenuState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameStates/MainMenuState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/BootstrapInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/BootstrapInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/GameEntities/CharacterInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/GameEntities/CharacterInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/GameLoopInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/GameLoopInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/CharacterFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/CharacterFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/ChunkFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/ChunkFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/IFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/IFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/ChunkFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/ChunkFactory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/ICharacterFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/ICharacterFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/IFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/IFactory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/IFactoryWithRoles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/IFactoryWithRoles.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/ILobbyNpcFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/ILobbyNpcFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/LobbyNpcFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/LobbyNpcFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/PeacefulNpcFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/PeacefulNpcFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Pools/ChunkPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Pools/ChunkPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Fx/FxPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Fx/FxPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/GlobalSettings/GlobalSettingsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/GlobalSettings/GlobalSettingsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/GlobalSettings/IGlobalSettingsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/GlobalSettings/IGlobalSettingsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/MobileInputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/MobileInputService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/PcInputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/PcInputService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/StartGameButtonHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/StartGameButtonHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Interfaces/IHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Interfaces/IHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/ChunkLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/ChunkLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/GameLobbyLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/GameLobbyLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/GameMapLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/GameMapLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/IAutoLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/IAutoLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/ILoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/ILoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Npc/Providers/GlobalNpcContextProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Npc/Providers/GlobalNpcContextProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Pools/ChunkPool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Pools/ChunkPool.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Saves/ISaveLoadService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Saves/ISaveLoadService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Saves/SaveLoadService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Saves/SaveLoadService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Sfx/Base/SfxPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Sfx/Base/SfxPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Spawners/INpcSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Spawners/INpcSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Spawners/INpcSpawnerWithRoles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Spawners/INpcSpawnerWithRoles.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Spawners/LobbyNpcSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Spawners/LobbyNpcSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Spawners/NpcSpawnerWithRoles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Spawners/NpcSpawnerWithRoles.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Teleporters/ITeleporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Teleporters/ITeleporter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Teleporters/СharacterTeleporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Teleporters/СharacterTeleporter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Timers/GameLoopTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Timers/GameLoopTimer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Timers/PreGameCycleTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Timers/PreGameCycleTimer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/StateMachine.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Tools/ShaderTools/FullCustomShaderApplier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Tools/ShaderTools/FullCustomShaderApplier.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Tools/ShaderTools/InteractiveObjectShaderApplier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Tools/ShaderTools/InteractiveObjectShaderApplier.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/KinematicCharacterController/Core/KinematicCharacterMotor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/KinematicCharacterController/Core/KinematicCharacterMotor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/KinematicCharacterController/ExampleCharacter/Scripts/ExampleCharacterCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/KinematicCharacterController/ExampleCharacter/Scripts/ExampleCharacterCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/KinematicCharacterController/ExampleCharacter/Scripts/ExampleCharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/KinematicCharacterController/ExampleCharacter/Scripts/ExampleCharacterController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/Animators/LoadingScreenAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/Animators/LoadingScreenAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/FortuneWheels/RoleWheel/CharacterRoleWheelFxHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/FortuneWheels/RoleWheel/CharacterRoleWheelFxHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/FortuneWheels/RoleWheel/GameRoleFortuneWheel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/FortuneWheels/RoleWheel/GameRoleFortuneWheel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/FortuneWheels/RoleWheel/GameRoleFortuneWheelResultPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/FortuneWheels/RoleWheel/GameRoleFortuneWheelResultPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/FortuneWheels/RoleWheel/GameRoleFortuneWheelRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/FortuneWheels/RoleWheel/GameRoleFortuneWheelRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/FortuneWheels/RoleWheel/GameRoleFortuneWheelSegment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/FortuneWheels/RoleWheel/GameRoleFortuneWheelSegment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/GlobalSettings/GlobalSettingsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/GlobalSettings/GlobalSettingsHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/Timers/PreGameCycleTimerRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/Timers/PreGameCycleTimerRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/Timers/PreGameCycleTimerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/Timers/PreGameCycleTimerView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Ui/MainHudHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Ui/MainHudHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UniversalRenderPipelineGlobalSettings.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UniversalRenderPipelineGlobalSettings.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/AllIn13DShader/AllIn3DShaderConfig/GlobalConfiguration.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/AllIn13DShader/AllIn3DShaderConfig/GlobalConfiguration.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/AllIn13DShader/AllIn3DShaderConfig/PropertiesConfigCollection.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/AllIn13DShader/AllIn3DShaderConfig/PropertiesConfigCollection.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/AllIn13DShader/Demo/Materials/StandardExamples/MAT_ GlowEyesStandard.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/AllIn13DShader/Demo/Materials/StandardExamples/MAT_ GlowEyesStandard.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/AllIn13DShader/Demo/Materials/StandardExamples/MAT_Ellen_Body_MatStandard.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/AllIn13DShader/Demo/Materials/StandardExamples/MAT_Ellen_Body_MatStandard.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/AllIn13DShader/Demo/Materials/StandardExamples/MAT_Ellen_Hair_MatStandard.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/AllIn13DShader/Demo/Materials/StandardExamples/MAT_Ellen_Hair_MatStandard.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/AllIn13DShader/Demo/Materials/StandardExamples/MAT_Ellen_Head_MatStandard.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/AllIn13DShader/Demo/Materials/StandardExamples/MAT_Ellen_Head_MatStandard.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/AllIn13DShader/Demo/Materials/StandardExamples/MAT_Ellen_Tear_MatStandard.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/AllIn13DShader/Demo/Materials/StandardExamples/MAT_Ellen_Tear_MatStandard.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/AllIn13DShader/Demo/Materials/StandardExamples/MAT_KnightFaceStandard.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/AllIn13DShader/Demo/Materials/StandardExamples/MAT_KnightFaceStandard.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/AllIn13DShader/Demo/Materials/StandardExamples/MAT_KnightMetalStandard.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/AllIn13DShader/Demo/Materials/StandardExamples/MAT_KnightMetalStandard.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/AllIn13DShader/Demo/Materials/StandardExamples/MAT_SkeletonStandard.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/AllIn13DShader/Demo/Materials/StandardExamples/MAT_SkeletonStandard.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/YG/SavesYG.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/YG/SavesYG.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/Scenes/scn_sampleScene_terrain.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/Scenes/scn_sampleScene_terrain.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/Scenes/scn_sampleScene_waterfall.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/Scenes/scn_sampleScene_waterfall.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/_help.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/_help/ZerinLabs - shaderPack (CartoonWater) TUTORIAL.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/_help/ZerinLabs - shaderPack (CartoonWater) TUTORIAL.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/animation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/animation/Cam_mainTimeline.playable" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/animation/Cam_mainTimeline.playable.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/materials/mat_col_brownRock.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/materials/mat_col_brownRock.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/materials/mat_col_grey.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/materials/mat_col_grey.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/materials/mat_fx_cartoonWater_splash.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/materials/mat_fx_cartoonWater_splash.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/materials/mat_terrain_autoPond.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/materials/mat_terrain_autoPond.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/materials/mat_terrain_autoTerrain.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/materials/mat_terrain_autoTerrain.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/materials/mat_test_depthtest.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/materials/mat_test_depthtest.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/materials/mat_water_autoPond.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/materials/mat_water_autoPond.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/materials/mat_water_autoRiver.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/materials/mat_water_autoRiver.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/meshes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/meshes/environment.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/meshes/environment.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/meshes/rock.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/meshes/rock.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/meshes/terrain.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/meshes/terrain.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/meshes/waterfall.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/meshes/waterfall.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/meshes/waterplane.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/meshes/waterplane.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/particleSystems.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/particleSystems/PS_waterfallFall.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/particleSystems/PS_waterfallFall.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/particleSystems/PS_waterfallSplash.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/particleSystems/PS_waterfallSplash.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/postprocess_profile.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/postprocess_profile/ppp_sampleScene.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/postprocess_profile/ppp_sampleScene.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/postprocess_volumes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/postprocess_volumes/vol_sampleScene.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/postprocess_volumes/vol_sampleScene.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/prefab/waterplane.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/prefab/waterplane.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/rendering.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/rendering/UniversalRenderPipelineAsset.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/rendering/UniversalRenderPipelineAsset.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/rendering/UniversalRenderPipelineAsset_Renderer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/rendering/UniversalRenderPipelineAsset_Renderer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/shaders/sh_terrain_triplanar_autoTerrain_URP.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/shaders/sh_terrain_triplanar_autoTerrain_URP.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/shaders/sh_water_stylised_autoPond_URP.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/shaders/sh_water_stylised_autoPond_URP.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/shaders/sh_water_stylised_autoRiver_URP.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/shaders/sh_water_stylised_autoRiver_URP.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_fx_cellular.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_fx_cellular.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_fx_cellular_inv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_fx_cellular_inv.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_fx_clouds.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_fx_clouds.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_fx_distorsion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_fx_distorsion.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_grass_DF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_grass_DF.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_grass_NM.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_grass_NM.bmp.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_particlesWater_DFA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_particlesWater_DFA.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_rock_DF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_rock_DF.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_rock_NM.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_rock_NM.bmp.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_vfx_waterTexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_vfx_waterTexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_vfx_waterTexture_DF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_vfx_waterTexture_DF.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_vfx_waterfallTexture_DF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/ZerinLabs_shaderPack_CartoonWater/textures/t_vfx_waterfallTexture_DF.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,68 +259,155 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/Character/IMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Timers/PreGameCycleTimer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/IPeacefulNpcFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@be6c4fd0abf5/InputSystem/Actions/InputAction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/KinematicCharacterController/ExampleCharacter/Scripts/ExampleCharacterCamera.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Main/IInstantiator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Ui/Core/Animators/LoadingScreenAnimator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/KinematicCharacterController/ExampleCharacter/Scripts/ExampleCharacterController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Teleporters/ITeleporter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Teleporters/СharacterTeleporter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterRoleAdjuster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Timers/GameLoopTimer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterMovement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/LobbyNpcFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Tools/ShaderTools/InteractiveObjectShaderApplier.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Tools/ShaderTools/FullCustomShaderApplier.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Saves/SaveLoadService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Saves/ISaveLoadService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/PcInputService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/GameLoopInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/IFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/CoroutineRunnerService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ThirdParty/AllIn13DShader/Demo/Scripts/DemoCameraController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/ICoroutineRunnerService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/CharacterFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/StartGameButtonHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/GameMap/GameMapRoot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/MobileInputService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameStates/GameLoopState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameStates/BootstrapState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/BootstrapInstaller.cs.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/BootstrapInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/Lobby/GameLobbyRoot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/INpcFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/ILobbyNpcFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/GameEntities/CharacterInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/AI/Behaviours/ChaseBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Sfx/Base/SfxPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterRoot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/KinematicCharacterController/Core/KinematicCharacterMotor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Sfx/Timer/ITimerSfxPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/ICharacterFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Npc/Providers/GlobalNpcContextProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/AI/Npcs/INpcRoot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/AI/Npcs/Core/NpcHealthShaderChanger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/GameLoopInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/AI/Npcs/LobbyNpcRoot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/AI/Npcs/NpcRoot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/CoroutineRunnerService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Fx/FxPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/AI/Npcs/PeacefulNpcRoot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/Components/NpcHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/Components/Animations/INpcAnimator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/Components/NpcAnimationPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/BootstrapInstaller.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/BootstrapInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/Components/NpcVfxHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/KinematicCharacterController/ExampleCharacter/Scripts/ExampleCharacterCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Spawners/ILobbyNpcSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ThirdParty/YG/SavesYG.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Main/IInstantiator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/IGameMapLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/KinematicCharacterController/ExampleCharacter/Scripts/ExampleCharacterController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/IGameLobbyLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F5B293C7-4049-457C-ABC2-8437C5A76392/9b/684f908d/InjectAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/GameEntities/Npc/PeacefullNpcInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F5B293C7-4049-457C-ABC2-8437C5A76392/bf/c66ff3a5/PreserveAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F5B293C7-4049-457C-ABC2-8437C5A76392/ce/9c8a8b99/InjectAttributeBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ThirdParty/AllIn13DShader/Demo/Scripts/DemoCameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/ICoroutineRunnerService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameStates/GameLoopState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameStates/BootstrapState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Ui/Core/FortuneWheels/RoleWheel/GameRoleFortuneWheelRoot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/Character/ICharacterMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameStates/MainMenuState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Ui/Core/GlobalSettings/GlobalSettingsHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Ui/Core/FortuneWheels/RoleWheel/GameRoleFortuneWheelResultPresenter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Ui/Core/FortuneWheels/RoleWheel/GameRoleFortuneWheel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Ui/Core/FortuneWheels/RoleWheel/GameRoleFortuneWheelSegment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/GlobalSettings/GlobalSettingsService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/GlobalSettings/IGlobalSettingsService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Ui/Core/FortuneWheels/RoleWheel/CharacterRoleWheelFxHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Ui/Core/Animators/LoadingScreenAnimator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Ui/Core/Timers/PreGameCycleTimerRoot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Teleporters/ITeleporter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Teleporters/СharacterTeleporter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Interfaces/IHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/LobbyNpcFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Ui/Core/Timers/PreGameCycleTimerView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Tools/ShaderTools/InteractiveObjectShaderApplier.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Interfaces/ICharacterHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Tools/ShaderTools/FullCustomShaderApplier.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/IFactoryWithRoles.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/PeacefulNpcFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BAB7D1A0-0376-483B-944D-B50CDC31E41D/F9/attribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/CharacterFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Spawners/LobbyNpcSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterGameRoles/States/CharacterMurderGameRoleState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterGameRoles/States/Murder/MurderRoleDispatcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Ui/MainHudHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterGameRoles/States/Murder/IRoleDispatcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Spawners/NpcSpawnerWithRoles.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Factories/IFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterGameRoles/ICharacterGameRoleState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterGameRoles/CharacterGameRoleStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Spawners/INpcSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterRoot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/GameMapLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/KinematicCharacterController/Core/KinematicCharacterSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/KinematicCharacterController/Core/KinematicCharacterMotor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/ILoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/IAutoLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/GameLobbyLoader.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Configs/HostileLocationConfig.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/PcInputService.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/MobileInputService.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/StateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/ICharacterFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Npcs/INpcRoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/Components/Animations/INpcAnimator.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/Components/NpcAnimationPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Npcs/LobbyNpcRoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Fx/FxPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameStates/GameLoopState.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/ICoroutineRunnerService.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/CoroutineRunnerService.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/StateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/G.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Timers/GameLoopTimer.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Timers/PreGameCycleTimer.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Spawners/INpcSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Spawners/LobbyNpcSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/GameLobbyLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/ILoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/Timers/PreGameCycleTimerView.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/Timers/PreGameCycleTimerRoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Core/Lobby/GameLobbyRoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/FortuneWheels/RoleWheel/CharacterRoleWheelFxHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Ui/MainHudHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Npcs/Core/NpcHealthShaderChanger.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Core/Components/NpcHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Core/AI/Npcs/PeacefulNpcRoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/StartGameButtonHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Sfx/Base/SfxPlayer.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameStates/BootstrapState.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/BootstrapInstaller.cs.meta" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/BootstrapInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/IFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/CharacterFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/LobbyNpcFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Npc/Providers/GlobalNpcContextProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/MobileInputService.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/PcInputService.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/GameLoopInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/KinematicCharacterController/ExampleCharacter/Scripts/ExampleCharacterController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/KinematicCharacterController/ExampleCharacter/Scripts/ExampleCharacterCamera.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/KinematicCharacterController/Core/KinematicCharacterMotor.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Teleporters/ITeleporter.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Teleporters/СharacterTeleporter.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/GameEntities/CharacterInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Saves/SaveLoadService.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Saves/ISaveLoadService.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/FortuneWheels/RoleWheel/GameRoleFortuneWheel.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/FortuneWheels/RoleWheel/GameRoleFortuneWheelResultPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/FortuneWheels/RoleWheel/GameRoleFortuneWheelRoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/FortuneWheels/RoleWheel/GameRoleFortuneWheelSegment.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Installers/BootstrapInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/PeacefulNpcFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/IPeacefulNpcFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/ILobbyNpcFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/LobbyNpcFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/IFactoryWithRoles.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/GlobalSettings/IGlobalSettingsService.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/GlobalSettings/GlobalSettingsService.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Factories/Npcs/INpcFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Spawners/NpcSpawnerWithRoles.cs" />
+        <option value="$PROJECT_DIR$/Assets/ThirdParty/YG/SavesYG.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Core/GameMap/GameMapRoot.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Tools/ShaderTools/FullCustomShaderApplier.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Tools/ShaderTools/InteractiveObjectShaderApplier.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterRoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Loaders/GameMapLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Core/Character/CharacterRoleAdjuster.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Ui/Core/GlobalSettings/GlobalSettingsHandler.cs" />
       </list>
     </option>
   </component>
@@ -173,6 +453,7 @@
       <workItem from="1790397560142" duration="106000" />
       <workItem from="1790397684726" duration="672000" />
       <workItem from="1790483364902" duration="3548000" />
+      <workItem from="1790528625708" duration="10953000" />
     </task>
     <task id="LOCAL-00001" summary="short fix : gameinput class returned">
       <created>1790367057294</created>
@@ -211,23 +492,27 @@
       <screen x="0" y="0" width="1024" height="640" />
     </state>
     <state x="46" y="0" key="CommitChangelistDialog2/0.0.1024.640@0.0.1024.640" timestamp="1790367020641" />
-    <state x="0" y="0" key="RiderGenerateDialog" timestamp="1790486637052">
+    <state x="0" y="0" key="RiderGenerateDialog" timestamp="1790534297075">
       <screen x="0" y="0" width="1024" height="640" />
     </state>
-    <state x="0" y="0" key="RiderGenerateDialog/0.0.1024.640@0.0.1024.640" timestamp="1790486637052" />
-    <state x="0" y="65" width="1024" height="575" maximized="true" key="dock-window-1" timestamp="1790486928428">
+    <state x="0" y="0" key="RiderGenerateDialog/0.0.1024.640@0.0.1024.640" timestamp="1790534297075" />
+    <state x="100" y="100" width="824" height="440" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1790539044431">
+      <screen x="0" y="0" width="1024" height="640" />
+    </state>
+    <state x="100" y="100" width="824" height="440" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1024.640@0.0.1024.640" timestamp="1790539044431" />
+    <state x="98" y="0" width="926" height="573" key="dock-window-1" timestamp="1790538318433">
       <screen x="0" y="0" width="1024" height="640" />
     </state>
     <state x="0" y="58" width="1024" height="517" key="dock-window-1/0.0.1024.575@0.0.1024.575" timestamp="1790398719363" />
     <state x="90" y="0" width="934" height="579" key="dock-window-1/0.0.1024.579@0.0.1024.579" timestamp="1790369735211" />
-    <state x="0" y="65" width="1024" height="575" maximized="true" key="dock-window-1/0.0.1024.640@0.0.1024.640" timestamp="1790486928428" />
-    <state x="418" y="0" width="926" height="640" key="dock-window-2" timestamp="1790486928442">
+    <state x="98" y="0" width="926" height="573" key="dock-window-1/0.0.1024.640@0.0.1024.640" timestamp="1790538318433" />
+    <state x="0" y="0" width="1024" height="640" key="dock-window-2" timestamp="1790529120626">
       <screen x="0" y="0" width="1024" height="640" />
     </state>
-    <state x="418" y="0" width="926" height="640" key="dock-window-2/0.0.1024.640@0.0.1024.640" timestamp="1790486928442" />
-    <state x="91" y="0" width="840" height="638" key="search.everywhere.popup" timestamp="1790485791227">
+    <state x="0" y="0" width="1024" height="640" key="dock-window-2/0.0.1024.640@0.0.1024.640" timestamp="1790529120626" />
+    <state x="91" y="0" width="840" height="638" key="search.everywhere.popup" timestamp="1790541445080">
       <screen x="0" y="0" width="1024" height="640" />
     </state>
-    <state x="91" y="0" width="840" height="638" key="search.everywhere.popup/0.0.1024.640@0.0.1024.640" timestamp="1790485791227" />
+    <state x="91" y="0" width="840" height="638" key="search.everywhere.popup/0.0.1024.640@0.0.1024.640" timestamp="1790541445080" />
   </component>
 </project>

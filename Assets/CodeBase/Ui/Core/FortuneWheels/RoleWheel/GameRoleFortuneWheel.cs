@@ -6,6 +6,7 @@ using _Root._Scripts.Core.Character;
 using _Root._Scripts.Core.Roles;
 using _Root._Scripts.Infrastructure;
 using _Root._Scripts.Infrastructure.Services.ConfigProviding;
+using CodeBase.Infrastructure;
 using UnityEngine;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;

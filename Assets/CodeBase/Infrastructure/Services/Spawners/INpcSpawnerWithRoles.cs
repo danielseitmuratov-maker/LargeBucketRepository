@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using _Root._Scripts.Core.AI.Npcs;
 using _Root._Scripts.Core.Roles;
+using CodeBase.Core.AI.Npcs;
 using Unity.AI.Navigation;
 
 namespace _Root._Scripts.Infrastructure.Services.Spawners

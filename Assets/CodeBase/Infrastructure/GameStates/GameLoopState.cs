@@ -4,20 +4,21 @@ using _Root._Scripts.Configs;
 using _Root._Scripts.Core.AI.Npcs;
 using _Root._Scripts.Core.Character;
 using _Root._Scripts.Core.GameMap;
-using _Root._Scripts.Core.Lobby;
 using _Root._Scripts.Core.Roles;
 using _Root._Scripts.Infrastructure;
 using _Root._Scripts.Infrastructure.Services.ConfigProviding;
-using _Root._Scripts.Infrastructure.Services.Factories;
 using _Root._Scripts.Infrastructure.Services.Loaders;
 using _Root._Scripts.Infrastructure.Services.Npc.Providers;
 using _Root._Scripts.Infrastructure.Services.RandomPoints;
-using _Root._Scripts.Infrastructure.Services.Saves;
 using _Root._Scripts.Infrastructure.Services.Spawners;
 using _Root._Scripts.Infrastructure.Services.Timers;
 using _Root._Scripts.Ui.Core.FortuneWheels.RoleWheel;
+using CodeBase.Core.AI.Npcs;
 using CodeBase.Core.Character;
+using CodeBase.Core.Lobby;
 using CodeBase.Infrastructure.Services.Factories;
+using CodeBase.Infrastructure.Services.Loaders;
+using CodeBase.Infrastructure.Services.Spawners;
 using Unity.AI.Navigation;
 using UnityEngine;
 using YG;
@@ -27,9 +28,7 @@ namespace CodeBase.Infrastructure.GameStates
     public class GameLoopState : IState, IDisposable
     {
         private readonly StateMachine _stateMachine;
-        private readonly ISaveLoadService _saveLoadService;
         private readonly IConfigProvider _configProvider;
-        private readonly IFactory<CharacterRoot> _characterFactory;
         private readonly GameRoleFortuneWheelRoot _gameRoleFortuneWheelRoot;
         private readonly INpcSpawner<LobbyNpcRoot> _lobbyNpcSpawner;
         private readonly ILoader<GameLobbyRoot> _gameLobbyLoader;
@@ -47,21 +46,24 @@ namespace CodeBase.Infrastructure.GameStates
         private INpcSpawnerWithRoles _gameNpcSpawner;
         private readonly IGameLoopTimer _gameLoopTimer;
         private readonly IGlobalNpcContextProvider _globalNpcContextProvider;
+        private readonly ICharacterFactory _characterFactory;
         private List<NpcRoot> _spawnedNpcs;
         private bool _isRoleReceived;
         private bool _isLobbyLoaded;
 
-        public GameLoopState(StateMachine stateMachine, ISaveLoadService saveLoadService,
+        public GameLoopState()
+        {
+            
+        }
+
+        public GameLoopState(StateMachine stateMachine,
             IConfigProvider configProvider,
-            IFactory<CharacterRoot> characterFactory,
             ILoader<GameLobbyRoot> gameLobbyLoader, ILoader<GameMapRoot> gameMapLoader,
             IRandomNavMeshPointService randomNavMeshPointService, GameRoleFortuneWheelRoot gameRoleFortuneWheelRoot,
             INpcSpawner<LobbyNpcRoot> lobbyNpcSpawner, INpcSpawnerWithRoles gameNpcSpawner,
-            IGameLoopTimer gameLoopTimer, IGlobalNpcContextProvider globalNpcContextProvider)
+            IGameLoopTimer gameLoopTimer, IGlobalNpcContextProvider globalNpcContextProvider,ICharacterFactory characterFactory)
         {
-            _saveLoadService = saveLoadService;
             _configProvider = configProvider;
-            _characterFactory = characterFactory;
             _gameLobbyLoader = gameLobbyLoader;
             _gameMapLoader = gameMapLoader;
             _randomNavMeshPointService = randomNavMeshPointService;
@@ -70,6 +72,7 @@ namespace CodeBase.Infrastructure.GameStates
             _gameNpcSpawner = gameNpcSpawner;
             _gameLoopTimer = gameLoopTimer;
             _globalNpcContextProvider = globalNpcContextProvider;
+            _characterFactory = characterFactory;
             _stateMachine = stateMachine;
 
 

@@ -22,7 +22,6 @@ namespace _Root._Scripts.Ui.Core.FortuneWheels.RoleWheel
         {
             _config = config;
             _gameRole = config.GameRole;
-            _fullCustomShaderApplier.Init();
         }
 
         public void Highlight()

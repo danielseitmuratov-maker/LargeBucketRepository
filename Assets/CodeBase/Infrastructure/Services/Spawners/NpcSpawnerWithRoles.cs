@@ -1,20 +1,21 @@
 using System;
 using System.Collections.Generic;
 using _Root._Scripts.Configs;
-using _Root._Scripts.Core.AI.Npcs;
 using _Root._Scripts.Core.Roles;
 using _Root._Scripts.Infrastructure.Services.ConfigProviding;
-using _Root._Scripts.Infrastructure.Services.Factories;
 using _Root._Scripts.Infrastructure.Services.RandomPoints;
-using CodeBase.Infrastructure.Services.Factories;
+using _Root._Scripts.Infrastructure.Services.Spawners;
+using CodeBase.Core.AI.Npcs;
+using CodeBase.Infrastructure.Services.Factories.Npcs;
 using Unity.AI.Navigation;
 using UnityEngine;
+using Zenject;
 
-namespace _Root._Scripts.Infrastructure.Services.Spawners
+namespace CodeBase.Infrastructure.Services.Spawners
 {
     public class NpcSpawnerWithRoles : INpcSpawnerWithRoles, IDisposable
     {
-        private readonly Dictionary<GameRole, IFactory<NpcRoot>> _factories;
+        private readonly Dictionary<GameRole, INpcFactory<NpcRoot>> _factories;
         private readonly IRandomNavMeshPointService _randomPointService;
         private readonly IConfigProvider _configProvider;
         private readonly NpcSpawnerConfig _config;
@@ -25,7 +26,7 @@ namespace _Root._Scripts.Infrastructure.Services.Spawners
         public event Action<NpcRoot> ObjectSpawned;
         public event Action<NpcRoot> ObjectDeSpawned;
 
-        public NpcSpawnerWithRoles(Dictionary<GameRole, IFactory<NpcRoot>> factories, IRandomNavMeshPointService randomPointService,
+        public NpcSpawnerWithRoles(Dictionary<GameRole, INpcFactory<NpcRoot>> factories, IRandomNavMeshPointService randomPointService,
             IConfigProvider configProvider)
         {
             _factories = factories;

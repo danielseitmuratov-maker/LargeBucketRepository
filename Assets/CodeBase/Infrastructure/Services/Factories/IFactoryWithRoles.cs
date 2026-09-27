@@ -1,7 +1,7 @@
 using _Root._Scripts.Core.Roles;
 using UnityEngine;
 
-namespace _Root._Scripts.Infrastructure.Services.Factories
+namespace CodeBase.Infrastructure.Services.Factories
 {
     public interface IFactoryWithRoles<T>
     {

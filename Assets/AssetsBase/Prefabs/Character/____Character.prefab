@@ -940,6 +940,7 @@ GameObject:
   - component: {fileID: 2974298923353957452}
   - component: {fileID: 2207457970602657005}
   - component: {fileID: 4436498117242416370}
+  - component: {fileID: 1765093354909107298}
   m_Layer: 11
   m_Name: ____Character
   m_TagString: Untagged
@@ -976,15 +977,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ac2bb974c2d474eb33cf7704f016dc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_Root._Scripts.Core.Character.CharacterRoot
-  _motor: {fileID: 2207457970602657005}
-  _characterController: {fileID: 2974298923353957452}
-  _camera: {fileID: 5973796532523911100}
-  _cameraFollowPoint: {fileID: 7371807843711889107}
-  _animator: {fileID: 1068615745265585496}
-  _config: {fileID: 11400000, guid: a3a32408f0e764176b4d4d217ee44077, type: 2}
-  _shaderAppliers:
-  - {fileID: 3771792748088167616}
-  _auraOutlinSpawnTransform: {fileID: 1919496603956965479}
 --- !u!136 &2508575922795300403
 CapsuleCollider:
   m_ObjectHideFlags: 8
@@ -1109,6 +1101,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1765093354909107298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4847222850307594672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 072b2c10459148d1aff5753d66ba3672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CodeBase.Infrastructure.Installers.GameEntities.CharacterInstaller
+  _transform: {fileID: 6551891232810080317}
+  _motor: {fileID: 2207457970602657005}
+  _animator: {fileID: 1068615745265585496}
 --- !u!1 &5194466449322898136
 GameObject:
   m_ObjectHideFlags: 0

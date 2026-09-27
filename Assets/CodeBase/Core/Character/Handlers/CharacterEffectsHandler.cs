@@ -1,6 +1,7 @@
 using System;
 using _Root._Scripts.Configs;
 using _Root._Scripts.Infrastructure.Services.ConfigProviding;
+using CodeBase.Core.Character;
 using UnityEngine;
 
 namespace _Root._Scripts.Core.Character.Handlers

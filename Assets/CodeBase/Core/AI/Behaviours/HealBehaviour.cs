@@ -1,5 +1,5 @@
 using _Root._Scripts.Core.AI.Core;
-using _Root._Scripts.Infrastructure.Services.Interfaces;
+using CodeBase.Infrastructure.Services.Interfaces;
 using KinematicCharacterController.Examples;
 using UnityEngine;
 

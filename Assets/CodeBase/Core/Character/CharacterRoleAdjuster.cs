@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using _Root._Scripts.Core.Roles;
 using _Root._Scripts.Infrastructure.Services.Saves;
 using _Root._Scripts.Infrastructure.Services.WeightedRandom;
+using CodeBase.Infrastructure.Services.Saves;
 using UnityEngine;
 using YG;
 
@@ -22,7 +23,7 @@ namespace _Root._Scripts.Core.Character
         {
             _saveLoadService = saveLoadService;
             _weightedRandomService = weightedRandomService;
-            _data = _saveLoadService.Data;
+         //   _data = _saveLoadService.Data;
 
             _dropChances = new List<float>
             {

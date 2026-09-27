@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using _Root._Scripts.Core.AI.Core.So;
 using _Root._Scripts.Core.AI.Npcs;
 using _Root._Scripts.Core.Roles;
+using CodeBase.Core.AI.Npcs;
 using UnityEngine;
 
 namespace _Root._Scripts.Core.AI.Core

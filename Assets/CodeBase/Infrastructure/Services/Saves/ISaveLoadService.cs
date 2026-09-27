@@ -1,10 +1,8 @@
-using YG;
-
-namespace _Root._Scripts.Infrastructure.Services.Saves
+namespace CodeBase.Infrastructure.Services.Saves
 {
     public interface ISaveLoadService
     {
-        SavesYG Data { get; }
+        //SavesYG Data { get; }
         void Save();
         void ResetData();
         bool HasSave();

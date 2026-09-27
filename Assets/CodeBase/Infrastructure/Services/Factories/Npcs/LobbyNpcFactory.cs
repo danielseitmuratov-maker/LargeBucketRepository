@@ -2,6 +2,7 @@ using _Root._Scripts.Configs;
 using _Root._Scripts.Core.AI.Core;
 using _Root._Scripts.Core.AI.Npcs;
 using _Root._Scripts.Infrastructure.Services.ConfigProviding;
+using CodeBase.Core.AI.Npcs;
 using UnityEngine;
 using Zenject;
 
@@ -21,11 +22,11 @@ namespace CodeBase.Infrastructure.Services.Factories.Npcs
         public LobbyNpcRoot Create(Vector3 at, Transform parent = null)
         {
             var prefab =
-                _configProvider.GetConfig<NpcRoleConfigSo>(Paths.NpcData.Roles.LobbyNpcConfigRolePath)
+                _configProvider
+                    .GetConfig<NpcRoleConfigSo>(Paths.NpcData.Roles.LobbyNpcConfigRolePath)
                     .VisualPrefab as LobbyNpcRoot;
-            var gameObject = _instantiator.InstantiatePrefab(prefab, at, prefab.transform.rotation, parent);
-
-            return gameObject.GetComponent<LobbyNpcRoot>();
+            
+            return _instantiator.InstantiatePrefabForComponent<LobbyNpcRoot>(prefab, at, prefab.transform.rotation, parent);
         }
     }
 }

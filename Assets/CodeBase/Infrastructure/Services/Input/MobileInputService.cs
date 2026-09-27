@@ -47,11 +47,17 @@ namespace CodeBase.Infrastructure.Services.Input
         public Vector2 ReadLook() =>
             _input.Player.Look.ReadValue<Vector2>();
 
-        public Vector2 ReadZoom() =>
-            _input.Player.Zoom.ReadValue<Vector2>();
-        
-        public Vector2 ReadCameraRotation() => 
-            _input.Player.RotateCamera.ReadValue<Vector2>();
+        public Vector2 ReadZoom()
+        {
+           // return _input.Player.Zoom.ReadValue<Vector2>();
+            return Vector2.zero;
+        }
+
+        public Vector2 ReadCameraRotation()
+        {
+         //   return _input.Player.RotateCamera.ReadValue<Vector2>();
+            return Vector2.zero;
+        }
 
         private void OnSwipePerformed(InputAction.CallbackContext context)
         {
