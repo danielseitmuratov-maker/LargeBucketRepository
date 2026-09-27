@@ -8,6 +8,7 @@ using _Root._Scripts.Infrastructure.Services.Npc.Providers;
 using _Root._Scripts.Infrastructure.Services.Npc.Registrars;
 using _Root._Scripts.Infrastructure.Services.RandomPoints;
 using _Root._Scripts.Infrastructure.Services.Sfx.Base;
+using CodeBase.Infrastructure.Services.Factories;
 using UnityEngine;
 
 namespace _Root._Scripts.Infrastructure.Services.Factories.Npcs

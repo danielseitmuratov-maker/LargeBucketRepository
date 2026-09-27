@@ -19,6 +19,7 @@ namespace CodeBase.Infrastructure.Installers
     public class BootstrapInstaller : MonoInstaller
     {
         [SerializeField] private AudioMixerGroup _audioMixerGroup;
+        [SerializeField] private GameObject _coroutineRunnerServicePrefab;
 
         public override void InstallBindings()
         {
@@ -34,7 +35,8 @@ namespace CodeBase.Infrastructure.Installers
 
         private void BindInfrastructureServices()
         {
-            Container.Bind<ICoroutineRunnerService>().To<CoroutineRunnerService>().AsSingle();
+            BindCoroutineRunnerService();
+            
             Container.Bind<IConfigProvider>().To<ConfigProvider>().AsSingle();
             Container.Bind<IWeightedRandomService>().To<WeightedRandomService>().AsSingle();
             Container.Bind<ISaveLoadService>().To<SaveLoadService>().AsSingle();
@@ -46,7 +48,15 @@ namespace CodeBase.Infrastructure.Installers
             Container.Bind<IGameRoleFortuneWheel>().To<GameRoleFortuneWheel>().AsSingle();
             
         }
-        
+
+        private void BindCoroutineRunnerService()
+        {
+            Container
+                .BindInterfacesAndSelfTo<CoroutineRunnerService>()
+                .FromComponentInNewPrefab(_coroutineRunnerServicePrefab)
+                .AsSingle();
+        }
+
         private void BindInputService()
         {
             if (Application.isMobilePlatform)

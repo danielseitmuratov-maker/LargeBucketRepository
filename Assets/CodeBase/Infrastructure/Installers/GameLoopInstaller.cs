@@ -5,6 +5,8 @@ using _Root._Scripts.Infrastructure.Services.Npc.Providers;
 using _Root._Scripts.Infrastructure.Services.Npc.Registrars;
 using _Root._Scripts.Infrastructure.Services.RandomPoints;
 using _Root._Scripts.Infrastructure.Services.Timers;
+using CodeBase.Infrastructure.Services.Factories;
+using CodeBase.Infrastructure.Services.Factories.Npcs;
 using Zenject;
 
 namespace CodeBase.Infrastructure.Installers
@@ -19,11 +21,6 @@ namespace CodeBase.Infrastructure.Installers
             BindFactories();
             BindLoaders();
             BindHandleServices();
-        }
-
-        private void BindHandleServices()
-        {
-            throw new System.NotImplementedException();
         }
 
         private void BindGameLogicServices()
@@ -47,6 +44,8 @@ namespace CodeBase.Infrastructure.Installers
         
         private void BindFactories()
         {
+            Container.Bind<ICharacterFactory>().To<CharacterFactory>().AsSingle();
+            Container.Bind<ILobbyNpcFactory>().To<LobbyNpcFactory>().AsSingle();
         }
         
         private void BindLoaders()
@@ -55,6 +54,7 @@ namespace CodeBase.Infrastructure.Installers
         
          private void BindHandleServices()
          {
+             
          }
     }
 }

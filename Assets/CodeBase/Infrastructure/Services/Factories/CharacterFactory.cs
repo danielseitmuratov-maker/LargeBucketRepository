@@ -7,64 +7,29 @@ using _Root._Scripts.Infrastructure.Services.Input;
 using _Root._Scripts.Infrastructure.Services.Saves;
 using _Root._Scripts.Infrastructure.Services.Sfx.Base;
 using _Root._Scripts.Ui.Core.FortuneWheels.RoleWheel;
+using CodeBase.Core.Character;
+using JetBrains.Annotations;
 using UnityEngine;
+using Zenject;
 
-namespace _Root._Scripts.Infrastructure.Services.Factories
+namespace CodeBase.Infrastructure.Services.Factories
 {
-    public class CharacterFactory : IFactory<CharacterRoot>
+    public class CharacterFactory : ICharacterFactory
     {
+        private readonly IInstantiator _instantiator;
         private readonly IConfigProvider _configProvider;
-        private readonly IInputService _inputService;
-        private readonly ISaveLoadService _saveLoadService;
-        private readonly ISfxPlayer _sfxPlayer;
 
-        private CharacterConfig _config;
-        private CharacterRoot _prefab;
-        private ICoroutineRunnerService _coroutineRunnerService;
-        private IRoleDispatcher _roleDispatcher;
-        private IGameRoleFortuneWheel _gameRoleFortuneWheel;
-        private IFxPlayer _fxPlayer;
-
-        public CharacterFactory(IConfigProvider configProvider, IInputService inputService,
-            ISaveLoadService saveLoadService, ISfxPlayer sfxPlayer, ICoroutineRunnerService coroutineRunnerService,
-            IGameRoleFortuneWheel gameRoleFortuneWheel, IFxPlayer fxPlayer)
+        public CharacterFactory(IInstantiator instantiator,[CanBeNull] IConfigProvider configProvider)
         {
+            _instantiator = instantiator;
             _configProvider = configProvider;
-            _inputService = inputService;
-            _saveLoadService = saveLoadService;
-            _sfxPlayer = sfxPlayer;
-            _coroutineRunnerService = coroutineRunnerService;
-            _gameRoleFortuneWheel = gameRoleFortuneWheel;
-            _fxPlayer = fxPlayer;
-
-            SetUpValues();
         }
 
-        public CharacterRoot Create(Vector3 at, Transform parent = null)
+        public CharacterRoot Create(Vector3 at,Transform parent)
         {
-            CharacterRoot characterRoot = Object.Instantiate(_prefab, at, _prefab.transform.rotation);
-            InitRoot(characterRoot);
-            return characterRoot;
-        }
-
-
-        public CharacterRoot CreateById(int id, Vector3 at, Transform parent = null)
-        {
-            CharacterRoot characterRoot = Object.Instantiate(_prefab, at, _prefab.transform.rotation);
-            InitRoot(characterRoot);
-            return characterRoot;
-        }
-
-        private void InitRoot(CharacterRoot characterRoot)
-        {
-            characterRoot.Init(_inputService, _saveLoadService, _configProvider, _sfxPlayer, _coroutineRunnerService,
-                _gameRoleFortuneWheel, _fxPlayer);
-        }
-
-        private void SetUpValues()
-        {
-            _config = _configProvider.GetConfig<CharacterConfig>(Paths.GlobalValues.CharacterConfigPath);
-            _prefab = _config.Prefab;
+            var prefab = _configProvider.GetConfig<CharacterConfig>(Paths.GlobalValues.CharacterConfigPath).Prefab;
+            var gameObject =  _instantiator.InstantiatePrefab(prefab,at,prefab.transform.rotation,parent);
+            return gameObject.GetComponent<CharacterRoot>();
         }
     }
 }

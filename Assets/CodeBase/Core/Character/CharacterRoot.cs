@@ -1,10 +1,8 @@
 using System;
-using System.Collections.Generic;
-using _Root._Scripts.Configs;
+using _Root._Scripts.Core.Character;
 using _Root._Scripts.Core.Character.CharacterGameRoles.States.Murder;
 using _Root._Scripts.Core.Character.Handlers;
 using _Root._Scripts.Core.Roles;
-using _Root._Scripts.Infrastructure;
 using _Root._Scripts.Infrastructure.Services.ConfigProviding;
 using _Root._Scripts.Infrastructure.Services.Fx;
 using _Root._Scripts.Infrastructure.Services.Input;
@@ -12,35 +10,24 @@ using _Root._Scripts.Infrastructure.Services.Interfaces;
 using _Root._Scripts.Infrastructure.Services.Saves;
 using _Root._Scripts.Infrastructure.Services.Sfx.Base;
 using _Root._Scripts.Infrastructure.Services.Sfx.Character;
-using _Root._Scripts.Infrastructure.Services.Teleporters;
-using _Root._Scripts.Tools.ShaderTools;
 using _Root._Scripts.Ui.Core.FortuneWheels.RoleWheel;
-using KinematicCharacterController;
+using CodeBase.Infrastructure;
+using CodeBase.Infrastructure.Services.Teleporters;
 using KinematicCharacterController.Examples;
 using UnityEngine;
+using Zenject;
 
-namespace _Root._Scripts.Core.Character
+namespace CodeBase.Core.Character
 {
-    public class CharacterRoot : MonoBehaviour
+    public class CharacterRoot : MonoBehaviour ,IInitializable,IDisposable
     {
-        [Header("MovementSettings")] [SerializeField]
-        private KinematicCharacterMotor _motor;
 
-        [SerializeField] private ExampleCharacterController _characterController;
-        [SerializeField] private ExampleCharacterCamera _camera;
-        [SerializeField] private Transform _cameraFollowPoint;
         [SerializeField] private Animator _animator;
-
-        [Header("General")] [SerializeField] private CharacterConfig _config;
-        [SerializeField] private List<InteractiveObjectShaderApplier> _shaderAppliers;
-        [SerializeField] private Transform _auraOutlinSpawnTransform;
-
 
         private IMovement _movement;
         private CharacterAnimator _characterAnimator;
 
         private IInputService _inputService;
-        private ISaveLoadService _saveLoadService;
         private IHealth _health;
 
         private ITeleporter _teleporter;
@@ -55,20 +42,37 @@ namespace _Root._Scripts.Core.Character
         private IGameRoleFortuneWheel _gameRoleFortuneWheel;
         private GameRole _currentGameRole;
         private IFxPlayer _fxPlayer;
+        
+        private Transform _cameraFollowPoint;
+        private ExampleCharacterCamera _camera;
+        private ExampleCharacterController _characterController;
+
+        [Inject]
+        public void Construct(ExampleCharacterCamera camera, Transform cameraFollowPoint)
+        {
+            _camera = camera;
+            _cameraFollowPoint = cameraFollowPoint;
+        }
+
+        
+        public void Initialize()
+        {
+            InitializeCoreComponents();
+            SubscribeToEvents();
+        }
+        
 
         public void Init(IInputService inputService, ISaveLoadService saveLoadService, IConfigProvider configProvider,
             ISfxPlayer sfxPlayer, ICoroutineRunnerService coroutineRunnerService,
             IGameRoleFortuneWheel gameRoleFortuneWheel, IFxPlayer fxPlayer)
         {
             _inputService = inputService;
-            _saveLoadService = saveLoadService;
             _configProvider = configProvider;
             _sfxPlayer = sfxPlayer;
             _coroutineRunnerService = coroutineRunnerService;
             _gameRoleFortuneWheel = gameRoleFortuneWheel;
             _fxPlayer = fxPlayer;
 
-            InitializeComponents();
             SubscribeToEvents();
         }
 
@@ -76,28 +80,11 @@ namespace _Root._Scripts.Core.Character
         {
             InitializeCoreComponents();
             InitializeHandlers();
-            InitializeShaderComponents();
         }
 
         private void InitializeCoreComponents()
         {
-            _motor.Init();
-
-            _characterController.Init();
-            _camera.Init();
             _camera.SetFollowTransform(_cameraFollowPoint);
-
-            _teleporter = new СharacterTeleporter(_motor.transform, _coroutineRunnerService);
-            _health = new CharacterHealth();
-            _movement = new CharacterMovement(_inputService, _configProvider);
-            _attack = new CharacterAttack(transform, _configProvider);
-            _movement.Init(_characterController, _camera);
-        }
-
-        private void InitializeShaderComponents()
-        {
-            for (int i = 0; i < _shaderAppliers.Count; i++)
-                _shaderAppliers[i].Init();
         }
 
         private void InitializeHandlers()
@@ -169,6 +156,15 @@ namespace _Root._Scripts.Core.Character
             _soundHandler?.Dispose();
             _effectsHandler?.Dispose();
 
+            UnsubscribeFromEvents();
+        }
+
+        public void Dispose()
+        {
+            _characterAnimator?.Dispose();
+            _soundHandler?.Dispose();
+            _effectsHandler?.Dispose();
+            
             UnsubscribeFromEvents();
         }
     }

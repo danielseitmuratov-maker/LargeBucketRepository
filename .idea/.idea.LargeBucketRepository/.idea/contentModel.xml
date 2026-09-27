@@ -288,11 +288,13 @@
               <e p="MainMenuState.cs" t="Include" />
               <e p="TutorialState.cs" t="Include" />
             </e>
-            <e p="ICoroutineRunner.cs" t="Include" />
             <e p="ICoroutineRunnerService.cs" t="Include" />
             <e p="IExitableState.cs" t="Include" />
             <e p="Installers" t="Include">
               <e p="BootstrapInstaller.cs" t="Include" />
+              <e p="GameEntities" t="Include">
+                <e p="CharacterInstaller.cs" t="Include" />
+              </e>
               <e p="GameLoopInstaller.cs" t="Include" />
             </e>
             <e p="IState.cs" t="Include" />
@@ -309,9 +311,11 @@
               <e p="Factories" t="Include">
                 <e p="CharacterFactory.cs" t="Include" />
                 <e p="ChunkFactory.cs" t="Include" />
+                <e p="ICharacterFactory.cs" t="Include" />
                 <e p="IFactory.cs" t="Include" />
                 <e p="IFactoryWithRoles.cs" t="Include" />
                 <e p="Npcs" t="Include">
+                  <e p="ILobbyNpcFactory.cs" t="Include" />
                   <e p="LobbyNpcFactory.cs" t="Include" />
                   <e p="PeacefulNpcFactory.cs" t="Include" />
                 </e>

@@ -1,7 +1,6 @@
-using KinematicCharacterController;
 using UnityEngine;
 
-namespace _Root._Scripts.Infrastructure.Services.Teleporters
+namespace CodeBase.Infrastructure.Services.Teleporters
 {
     public interface ITeleporter
     {

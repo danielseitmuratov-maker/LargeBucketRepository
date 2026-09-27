@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 namespace _Root._Scripts.Tools.ShaderTools
 {
-    public class FullCustomShaderApplier : MonoBehaviour
+    public class FullCustomShaderApplier : MonoBehaviour ,IInitializable
     {
         protected const string BaseMapProperty = "_BaseMap";
         protected const string BumpMapProperty = "_BumpMap";
@@ -24,8 +25,8 @@ namespace _Root._Scripts.Tools.ShaderTools
         protected Renderer _renderer;
         protected bool _isInitialized = false;
 
-
-        public virtual void Init()
+        
+        public virtual void Initialize()
         {
             _renderer = GetComponent<Renderer>();
             if (_renderer == null)
@@ -40,6 +41,7 @@ namespace _Root._Scripts.Tools.ShaderTools
             ApplyAllProperties();
             _isInitialized = true;
         }
+        
 
         protected virtual void OnEnable()
         {
@@ -155,5 +157,6 @@ namespace _Root._Scripts.Tools.ShaderTools
         }
 
         public void RefreshAllProperties() => ApplyAllProperties();
+       
     }
 }

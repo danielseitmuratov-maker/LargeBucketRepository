@@ -5,6 +5,7 @@ using _Root._Scripts.Core.AI.Npcs;
 using _Root._Scripts.Infrastructure.Services.ConfigProviding;
 using _Root._Scripts.Infrastructure.Services.Factories;
 using _Root._Scripts.Infrastructure.Services.RandomPoints;
+using CodeBase.Infrastructure.Services.Factories;
 using Unity.AI.Navigation;
 using UnityEngine;
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 namespace KinematicCharacterController
 {
@@ -153,7 +154,7 @@ namespace KinematicCharacterController
     /// Component that manages character collisions and movement solving
     /// </summary>
     [RequireComponent(typeof(CapsuleCollider))]
-    public class KinematicCharacterMotor : MonoBehaviour
+    public class KinematicCharacterMotor : MonoBehaviour ,IInitializable    
     {
 #pragma warning disable 0414
         [Header("Components")]
@@ -734,8 +735,8 @@ namespace KinematicCharacterController
             _characterTransformToCapsuleBottomHemi = Capsule.center + (-_cachedWorldUp * (Capsule.height * 0.5f)) + (_cachedWorldUp * Capsule.radius);
             _characterTransformToCapsuleTopHemi = Capsule.center + (_cachedWorldUp * (Capsule.height * 0.5f)) + (-_cachedWorldUp * Capsule.radius);
         }
-
-        private void Awake()
+        
+        public void Initialize()
         {
             _transform = this.transform;
             ValidateData();
@@ -755,7 +756,7 @@ namespace KinematicCharacterController
 
             SetCapsuleDimensions(CapsuleRadius, CapsuleHeight, CapsuleYOffset);
         }
-
+        
         /// <summary>
         /// Update phase 1 is meant to be called after physics movers have calculated their velocities, but
         /// before they have simulated their goal positions/rotations. It is responsible for:

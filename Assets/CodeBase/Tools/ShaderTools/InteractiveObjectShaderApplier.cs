@@ -1,8 +1,9 @@
 using UnityEngine;
+using Zenject;
 
 namespace _Root._Scripts.Tools.ShaderTools
 {
-    public class InteractiveObjectShaderApplier : FullCustomShaderApplier
+    public class InteractiveObjectShaderApplier : FullCustomShaderApplier,IInitializable
     {
       
 
@@ -65,9 +66,11 @@ namespace _Root._Scripts.Tools.ShaderTools
 
         // ================= LIFECYCLE =================
 
-        public override void Init()
+       
+        
+        public void Initialize()
         {
-            base.Init();
+            base.Initialize();
             if (!_isInitialized) return;
 
             ValidatePropertyNames();
@@ -279,5 +282,7 @@ namespace _Root._Scripts.Tools.ShaderTools
 
             _renderer.SetPropertyBlock(_propertyBlock);
         }
+
+        
     }
 }

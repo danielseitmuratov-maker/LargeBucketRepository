@@ -16,6 +16,8 @@ using _Root._Scripts.Infrastructure.Services.Saves;
 using _Root._Scripts.Infrastructure.Services.Spawners;
 using _Root._Scripts.Infrastructure.Services.Timers;
 using _Root._Scripts.Ui.Core.FortuneWheels.RoleWheel;
+using CodeBase.Core.Character;
+using CodeBase.Infrastructure.Services.Factories;
 using Unity.AI.Navigation;
 using UnityEngine;
 using YG;

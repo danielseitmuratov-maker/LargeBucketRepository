@@ -1,4 +1,5 @@
 using _Root._Scripts.Core.Character;
+using CodeBase.Core.Character;
 using UnityEngine;
 
 namespace _Root._Scripts.Configs

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using _Root._Scripts.Configs;
 using _Root._Scripts.Core.Chunks;
 using _Root._Scripts.Infrastructure.Services.ConfigProviding;
+using CodeBase.Infrastructure.Services.Factories;
 using UnityEngine;
 
 namespace _Root._Scripts.Infrastructure.Services.Factories

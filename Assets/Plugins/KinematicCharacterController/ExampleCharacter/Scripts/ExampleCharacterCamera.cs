@@ -2,10 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 namespace KinematicCharacterController.Examples
 {
-    public class ExampleCharacterCamera : MonoBehaviour
+    public class ExampleCharacterCamera : MonoBehaviour ,IInitializable
     {
         [Header("Framing")]
         public Camera Camera;
@@ -60,8 +61,8 @@ namespace KinematicCharacterController.Examples
             DefaultDistance = Mathf.Clamp(DefaultDistance, MinDistance, MaxDistance);
             DefaultVerticalAngle = Mathf.Clamp(DefaultVerticalAngle, MinVerticalAngle, MaxVerticalAngle);
         }
-
-        void Awake()
+        
+        public void Initialize()
         {
             Transform = this.transform;
 
@@ -72,6 +73,7 @@ namespace KinematicCharacterController.Examples
 
             PlanarDirection = Vector3.forward;
         }
+        
 
         // Set the transform that the camera will orbit around
         public void SetFollowTransform(Transform t)
@@ -175,5 +177,7 @@ namespace KinematicCharacterController.Examples
                 Transform.position = targetPosition;
             }
         }
+
+        
     }
 }

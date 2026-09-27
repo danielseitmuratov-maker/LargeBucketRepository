@@ -4,10 +4,11 @@ using _Root._Scripts.Infrastructure.Services.ConfigProviding;
 using _Root._Scripts.Infrastructure.Services.Input;
 using UnityEngine;
 using KinematicCharacterController.Examples;
+using Zenject;
 
 namespace _Root._Scripts.Core.Character
 {
-    public class CharacterMovement : IMovement, IDisposable
+    public class CharacterMovement : IMovement,IInitializable,  IDisposable
     {
         public event Action<float> MoveSpeedChanged;
         public event Action Jumped;
@@ -29,23 +30,22 @@ namespace _Root._Scripts.Core.Character
         private bool _pendingJump;
 
 
-        public CharacterMovement(IInputService inputService, IConfigProvider configProvider)
+        public CharacterMovement(IInputService inputService, IConfigProvider configProvider,ExampleCharacterController characterController,ExampleCharacterCamera camera)
         {
             _inputService = inputService;
             _configProvider = configProvider;
-        }
-
-        public void Init(ExampleCharacterController characterController, ExampleCharacterCamera camera)
-        {
             _characterController = characterController;
             _camera = camera;
-
+        }
+        
+        public void Initialize()
+        {
             GetConfig();
 
             _inputService.JumpPerformed += OnJumpRequested;
             _inputService.AutoRunToggled += OnAutoRunToggled;
         }
-
+        
         private void GetConfig()
         {
             _config = _configProvider.GetConfig<CharacterConfig>(
@@ -116,4 +116,3 @@ namespace _Root._Scripts.Core.Character
         }
     }
 }
-
